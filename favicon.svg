@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+
+  <!-- 外側の二重エンソ円 -->
+  <circle cx="50" cy="46" r="36" stroke="#7ecad8" stroke-width="2.8" fill="none" opacity="0.55"/>
+  <circle cx="50" cy="46" r="30" stroke="#9ad8e4" stroke-width="1.6" fill="none" opacity="0.38"/>
+  <!-- 内側の渦巻き感（左下が開いている） -->
+  <path d="M50 16 C68 16 82 30 82 46 C82 58 75 68 64 73"
+    stroke="#5ab8cc" stroke-width="2.2" fill="none" opacity="0.65" stroke-linecap="round"/>
+
+  <!-- 足の指（セージグリーン） -->
+  <ellipse cx="36" cy="24" rx="3.2" ry="4" fill="#7aaa8a" opacity="0.92" transform="rotate(-12 36 24)"/>
+  <ellipse cx="43" cy="20.5" rx="3.5" ry="4.3" fill="#7aaa8a" opacity="0.92" transform="rotate(-4 43 20.5)"/>
+  <ellipse cx="50.5" cy="19.8" rx="3.5" ry="4.3" fill="#7aaa8a" opacity="0.92"/>
+  <ellipse cx="58" cy="21" rx="3.2" ry="4" fill="#7aaa8a" opacity="0.92" transform="rotate(6 58 21)"/>
+  <ellipse cx="64.5" cy="24.5" rx="2.8" ry="3.5" fill="#7aaa8a" opacity="0.92" transform="rotate(14 64.5 24.5)"/>
+
+  <!-- 足裏シルエット -->
+  <path d="M35 31 C33 40 34 52 38 58 C41 63 47 66 51 66 C55 66 61 63 64 58 C68 52 69 40 67 31 Z"
+    fill="#7aaa8a" opacity="0.88"/>
+
+  <!-- 水滴 -->
+  <path d="M51 82 C46.5 74.5 42 71 42 66.5 C42 61.5 46 57.5 51 57.5 C56 57.5 60 61.5 60 66.5 C60 71 55.5 74.5 51 82Z"
+    fill="#5ab8cc" opacity="0.92"/>
+  <!-- 水滴ハイライト -->
+  <ellipse cx="48" cy="64.5" rx="2.2" ry="3.5" fill="white" opacity="0.48" transform="rotate(-22 48 64.5)"/>
+
+  <!-- 波紋 -->
+  <ellipse cx="51" cy="86" rx="14" ry="3.5" stroke="#8dd4e8" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <ellipse cx="51" cy="88" rx="21" ry="5" stroke="#8dd4e8" stroke-width="0.9" fill="none" opacity="0.32"/>
+  <ellipse cx="51" cy="90" rx="28" ry="6.5" stroke="#8dd4e8" stroke-width="0.7" fill="none" opacity="0.18"/>
+
+  <!-- 左側の小水滴 -->
+  <circle cx="12" cy="50" r="2.2" fill="#8dd4e8" opacity="0.55"/>
+  <circle cx="16" cy="62" r="1.4" fill="#8dd4e8" opacity="0.4"/>
+  <circle cx="10" cy="66" r="1" fill="#8dd4e8" opacity="0.3"/>
+
+</svg>

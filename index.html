@@ -7,889 +7,24 @@
   <meta name="description" content="看護師歴20年のスタッフが、ご自宅・介護施設へ訪問。巻き爪・角質・保湿ケアなど、足の専門ケアを南大阪全域（河内長野市・富田林市・大阪狭山市）で提供します。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --navy:   #1b3f5c;
-      --teal:   #3a9ab8;
-      --teal2:  #4aaecb;
-      --mint:   #6ec9aa;
-      --pale:   #e8f6fb;
-      --pale2:  #f0faf7;
-      --white:  #ffffff;
-      --gray:   #64748b;
-      --dark:   #1a2e3b;
-      --border: rgba(58,154,184,0.18);
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Noto Sans JP', sans-serif;
-      color: var(--dark);
-      background: var(--white);
-      line-height: 1.8;
-    }
-
-    /* ===== HEADER ===== */
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 200;
-      background: rgba(255,255,255,0.94);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-      padding: 12px 48px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-
-    .logo-mark {
-      width: 44px; height: 44px;
-    }
-    .logo-mark svg { width: 100%; height: 100%; }
-
-    .logo-text .sub {
-      font-size: 9px;
-      color: var(--teal);
-      letter-spacing: 2.5px;
-      font-weight: 600;
-      text-transform: uppercase;
-      display: block;
-    }
-    .logo-text .main {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--navy);
-      font-family: 'Shippori Mincho', serif;
-      line-height: 1.2;
-    }
-
-    nav { display: flex; gap: 28px; align-items: center; }
-    nav a {
-      text-decoration: none;
-      color: var(--gray);
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.3px;
-      transition: color 0.2s;
-    }
-    nav a:hover { color: var(--teal); }
-
-    .nav-cta {
-      background: var(--navy);
-      color: var(--white) !important;
-      padding: 9px 22px;
-      border-radius: 4px;
-      font-weight: 700 !important;
-      font-size: 13px !important;
-      letter-spacing: 0.5px;
-      transition: background 0.2s !important;
-    }
-    .nav-cta:hover { background: var(--teal) !important; }
-
-    /* ===== FLOATING CTA ===== */
-    .float-cta {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      z-index: 300;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: flex-end;
-    }
-
-    .float-btn {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 13px 22px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 14px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.18);
-      transition: transform 0.2s, box-shadow 0.2s;
-      white-space: nowrap;
-    }
-    .float-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.2); }
-
-    .float-btn-tel  { background: var(--navy); color: white; }
-    .float-btn-line { background: #06C755; color: white; }
-
-    /* ===== HERO ===== */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    .hero-bg {
-      position: absolute; inset: 0;
-      background: url('hero-bg.png') center right / cover no-repeat;
-      z-index: 0;
-    }
-
-    .hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(
-        105deg,
-        rgba(27,63,92,0.88)  0%,
-        rgba(27,63,92,0.80) 35%,
-        rgba(27,63,92,0.42) 60%,
-        rgba(27,63,92,0.05) 82%
-      );
-      z-index: 1;
-    }
-
-    .hero-inner {
-      position: relative; z-index: 2;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 160px 56px 100px;
-      width: 100%;
-    }
-
-    .hero-content { max-width: 600px; }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.35);
-      color: rgba(255,255,255,0.92);
-      padding: 7px 18px;
-      border-radius: 50px;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      margin-bottom: 28px;
-      backdrop-filter: blur(4px);
-    }
-
-    .hero h1 {
-      font-family: 'Shippori Mincho', serif;
-      font-size: clamp(36px, 5vw, 62px);
-      font-weight: 800;
-      color: var(--white);
-      line-height: 1.4;
-      margin-bottom: 20px;
-      text-shadow: 0 2px 16px rgba(0,0,0,0.2);
-    }
-
-    .hero h1 .catch-accent {
-      color: #7ee0f5;
-    }
-
-    .hero-sub {
-      font-size: 15px;
-      color: rgba(255,255,255,0.82);
-      line-height: 2;
-      margin-bottom: 40px;
-    }
-
-    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-
-    .btn-hero-primary {
-      background: var(--teal2);
-      color: white;
-      padding: 16px 40px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 15px;
-      letter-spacing: 0.5px;
-      box-shadow: 0 6px 24px rgba(58,154,184,0.5);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .btn-hero-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(58,154,184,0.6); }
-
-    .btn-hero-secondary {
-      background: transparent;
-      color: white;
-      padding: 16px 40px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 15px;
-      border: 2px solid rgba(255,255,255,0.6);
-      transition: all 0.2s;
-    }
-    .btn-hero-secondary:hover { background: rgba(255,255,255,0.15); border-color: white; }
-
-    .hero-nurse-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 44px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.25);
-      border-radius: 12px;
-      padding: 14px 22px;
-      backdrop-filter: blur(6px);
-    }
-
-    .nurse-icon {
-      width: 44px; height: 44px;
-      background: var(--teal2);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-    }
-
-    .nurse-text .t { font-size: 11px; color: rgba(255,255,255,0.7); letter-spacing: 1px; }
-    .nurse-text .b { font-size: 15px; font-weight: 700; color: white; line-height: 1.3; }
-
-    /* ===== SECTION COMMON ===== */
-    section { padding: 96px 24px; }
-    .section-inner { max-width: 1100px; margin: 0 auto; }
-
-    .sec-label {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 4px;
-      color: var(--teal);
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      display: block;
-    }
-
-    .sec-title {
-      font-family: 'Shippori Mincho', serif;
-      font-size: clamp(26px, 3.5vw, 38px);
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 14px;
-      line-height: 1.5;
-    }
-
-    .sec-desc {
-      font-size: 14.5px;
-      color: var(--gray);
-      line-height: 2;
-      max-width: 580px;
-    }
-
-    .sec-header-center {
-      text-align: center;
-      margin-bottom: 64px;
-    }
-    .sec-header-center .sec-desc { margin: 0 auto; }
-
-    /* ===== ABOUT ===== */
-    #about { background: var(--pale); }
-
-    .about-layout {
-      display: flex;
-      flex-direction: row;
-      gap: 64px;
-      align-items: flex-start;
-    }
-
-    .about-photo {
-      position: relative;
-      border-radius: 24px;
-      overflow: hidden;
-      width: 340px;
-      max-width: 100%;
-      aspect-ratio: 3/4;
-      background: linear-gradient(135deg, var(--teal2), var(--mint));
-      display: flex; align-items: center; justify-content: center;
-      font-size: 80px;
-      flex-shrink: 0;
-      box-shadow: 0 12px 48px rgba(27,63,92,0.18);
-    }
-
-    .about-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-    }
-
-    .about-photo-label {
-      position: absolute;
-      bottom: 20px; left: 20px; right: 20px;
-      background: rgba(27,63,92,0.85);
-      backdrop-filter: blur(8px);
-      border-radius: 12px;
-      padding: 14px 18px;
-      color: white;
-    }
-    .about-photo-label .name { font-family: 'Shippori Mincho', serif; font-size: 16px; font-weight: 700; }
-    .about-photo-label .title { font-size: 11px; color: rgba(255,255,255,0.75); margin-top: 2px; }
-
-    .about-text { }
-
-    .about-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 24px 0;
-    }
-
-    .chip {
-      background: var(--white);
-      border: 1.5px solid var(--teal2);
-      color: var(--teal);
-      border-radius: 50px;
-      padding: 5px 14px;
-      font-size: 12.5px;
-      font-weight: 600;
-    }
-
-    .about-quote {
-      margin-top: 28px;
-      padding: 22px 26px;
-      background: var(--navy);
-      border-radius: 16px;
-      color: white;
-      font-family: 'Shippori Mincho', serif;
-      font-size: 17px;
-      font-weight: 700;
-      line-height: 1.8;
-      position: relative;
-    }
-    .about-quote::before {
-      content: '"';
-      font-size: 60px;
-      color: rgba(255,255,255,0.12);
-      position: absolute;
-      top: 6px; left: 14px;
-      line-height: 1;
-      font-family: Georgia, serif;
-    }
-    .about-quote-sig {
-      margin-top: 10px;
-      font-size: 11.5px;
-      color: rgba(255,255,255,0.6);
-      font-family: 'Noto Sans JP', sans-serif;
-      font-weight: 400;
-    }
-
-    /* ===== SYMPTOMS ===== */
-    #symptoms { background: var(--white); }
-
-    .symptoms-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .symptom-card {
-      background: var(--pale);
-      border-radius: 20px;
-      padding: 32px 26px;
-      border: 1.5px solid transparent;
-      transition: all 0.25s;
-      cursor: default;
-    }
-    .symptom-card:hover {
-      border-color: var(--teal2);
-      background: var(--white);
-      box-shadow: 0 8px 32px rgba(58,154,184,0.14);
-      transform: translateY(-4px);
-    }
-
-    .symptom-icon { font-size: 36px; margin-bottom: 14px; display: block; }
-    .symptom-card h3 {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 8px;
-      font-family: 'Shippori Mincho', serif;
-    }
-    .symptom-card p { font-size: 13px; color: var(--gray); line-height: 1.8; }
-
-    /* ===== SERVICES & PRICE ===== */
-    #services { background: linear-gradient(160deg, var(--pale) 0%, var(--pale2) 100%); }
-
-    .tabs {
-      display: flex;
-      gap: 0;
-      margin-bottom: 40px;
-      border-bottom: 2px solid var(--border);
-    }
-
-    .tab-btn {
-      background: none;
-      border: none;
-      padding: 14px 36px;
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--gray);
-      cursor: pointer;
-      font-family: 'Noto Sans JP', sans-serif;
-      border-bottom: 3px solid transparent;
-      margin-bottom: -2px;
-      transition: all 0.2s;
-    }
-    .tab-btn.active {
-      color: var(--teal);
-      border-bottom-color: var(--teal);
-    }
-    .tab-btn:hover { color: var(--teal); }
-
-    .tab-panel { display: none; }
-    .tab-panel.active { display: block; }
-
-    .price-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: var(--white);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
-    }
-
-    .price-table th {
-      background: var(--navy);
-      color: white;
-      padding: 16px 24px;
-      text-align: left;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .price-table td {
-      padding: 16px 24px;
-      font-size: 14px;
-      border-bottom: 1px solid var(--border);
-      color: var(--dark);
-    }
-
-    .price-table tr:last-child td { border-bottom: none; }
-    .price-table tr:hover td { background: var(--pale); }
-
-    .price-tag {
-      font-weight: 700;
-      color: var(--teal);
-      font-size: 16px;
-    }
-
-    .price-note {
-      margin-top: 20px;
-      padding: 14px 18px;
-      background: rgba(58,154,184,0.08);
-      border-radius: 10px;
-      border-left: 3px solid var(--teal2);
-      font-size: 13px;
-      color: var(--gray);
-    }
-
-    .facility-cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .facility-card {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    }
-
-    .facility-card h4 {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 12px;
-      font-family: 'Shippori Mincho', serif;
-      display: flex; align-items: center; gap: 8px;
-    }
-
-    .facility-card ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .facility-card li {
-      font-size: 13.5px;
-      color: var(--gray);
-      padding-left: 18px;
-      position: relative;
-    }
-    .facility-card li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--mint);
-      font-weight: 700;
-    }
-
-    /* ===== FLOW ===== */
-    #flow { background: var(--white); }
-
-    .flow-steps {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 0;
-      position: relative;
-      margin-top: 56px;
-    }
-
-    .flow-steps::before {
-      content: '';
-      position: absolute;
-      top: 35px;
-      left: 10%; right: 10%;
-      height: 2px;
-      background: linear-gradient(90deg, var(--teal2), var(--mint));
-      z-index: 0;
-    }
-
-    .flow-step {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 0 10px;
-    }
-
-    .flow-circle {
-      width: 70px; height: 70px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--teal2), var(--mint));
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      color: white;
-      box-shadow: 0 6px 20px rgba(58,154,184,0.38);
-      margin-bottom: 18px;
-    }
-    .flow-circle .sn { font-size: 8px; letter-spacing: 1px; opacity: 0.8; }
-    .flow-circle .si { font-size: 22px; font-weight: 700; line-height: 1; }
-
-    .flow-step h4 {
-      font-size: 13.5px; font-weight: 700;
-      color: var(--navy); margin-bottom: 6px;
-    }
-    .flow-step p { font-size: 11.5px; color: var(--gray); line-height: 1.7; }
-
-    /* ===== VOICE ===== */
-    #voice { background: var(--pale); }
-
-    .voices-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .voice-card {
-      background: var(--white);
-      border-radius: 20px;
-      padding: 28px 30px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      position: relative;
-    }
-
-    .voice-card::before {
-      content: '❝';
-      position: absolute;
-      top: 16px; right: 20px;
-      font-size: 32px;
-      color: var(--teal2);
-      opacity: 0.25;
-      line-height: 1;
-    }
-
-    .voice-stars { color: #f59e0b; font-size: 13px; margin-bottom: 12px; }
-
-    .voice-card p {
-      font-size: 13.5px;
-      color: var(--dark);
-      line-height: 1.9;
-      margin-bottom: 18px;
-    }
-
-    .voice-from {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      border-top: 1px solid var(--border);
-      padding-top: 14px;
-    }
-
-    .voice-avatar {
-      width: 38px; height: 38px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--teal2), var(--mint));
-      display: flex; align-items: center; justify-content: center;
-      font-size: 16px;
-      flex-shrink: 0;
-    }
-
-    .voice-name { font-size: 13px; font-weight: 700; color: var(--navy); }
-    .voice-attr { font-size: 11px; color: var(--gray); }
-
-    /* ===== AREA ===== */
-    #area { background: var(--white); }
-
-    .area-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 56px;
-      align-items: start;
-      margin-top: 48px;
-    }
-
-    .area-cities { }
-
-    .area-city-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin-bottom: 28px;
-    }
-
-    .area-city {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 16px 20px;
-      background: var(--pale);
-      border-radius: 12px;
-      border-left: 4px solid var(--teal2);
-    }
-
-    .area-city-icon { font-size: 20px; }
-    .area-city-name { font-size: 16px; font-weight: 700; color: var(--navy); font-family: 'Shippori Mincho', serif; }
-    .area-city-note { font-size: 12px; color: var(--gray); }
-
-    .area-note {
-      padding: 16px 20px;
-      background: rgba(110,201,170,0.12);
-      border-radius: 12px;
-      border-left: 4px solid var(--mint);
-      font-size: 13px;
-      color: var(--gray);
-      line-height: 1.8;
-    }
-
-    .area-map-box {
-      border-radius: 20px;
-      overflow: hidden;
-      background: var(--pale);
-      height: 360px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      color: var(--gray);
-      font-size: 14px;
-      border: 2px dashed var(--border);
-    }
-
-    .area-map-box .map-ph { font-size: 40px; }
-    .area-map-box p { text-align: center; line-height: 1.8; }
-
-    /* ===== CONTACT ===== */
-    #contact {
-      position: relative;
-      overflow: hidden;
-      padding: 96px 24px;
-    }
-
-    .contact-bg {
-      position: absolute; inset: 0;
-      background: url('hero-bg.png') center / cover no-repeat;
-      z-index: 0;
-    }
-
-    .contact-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(135deg,
-        rgba(27,63,92,0.92) 0%,
-        rgba(58,154,184,0.85) 100%
-      );
-      z-index: 1;
-    }
-
-    .contact-inner {
-      position: relative; z-index: 2;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    #contact .sec-label { color: rgba(255,255,255,0.7); }
-    #contact .sec-title { color: white; }
-    #contact .sec-desc { color: rgba(255,255,255,0.8); margin: 0 auto 52px; }
-
-    .contact-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .contact-card {
-      background: rgba(255,255,255,0.14);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.28);
-      border-radius: 20px;
-      padding: 36px 24px;
-      text-decoration: none;
-      color: white;
-      transition: all 0.2s;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-    }
-    .contact-card:hover {
-      background: rgba(255,255,255,0.22);
-      transform: translateY(-4px);
-    }
-
-    .contact-card-icon {
-      width: 60px; height: 60px;
-      background: rgba(255,255,255,0.2);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 26px;
-    }
-
-    .contact-card h3 {
-      font-size: 15px; font-weight: 700;
-      font-family: 'Shippori Mincho', serif;
-    }
-
-    .contact-card .contact-value {
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    .contact-card .contact-note {
-      font-size: 11.5px;
-      color: rgba(255,255,255,0.7);
-      line-height: 1.7;
-    }
-
-    .contact-badge {
-      display: inline-block;
-      margin-top: 8px;
-      background: rgba(255,255,255,0.2);
-      border-radius: 50px;
-      padding: 3px 12px;
-      font-size: 11px;
-      font-weight: 600;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: var(--navy);
-      color: rgba(255,255,255,0.55);
-      padding: 48px 48px 28px;
-    }
-
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .footer-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 48px;
-      padding-bottom: 32px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      margin-bottom: 24px;
-    }
-
-    .footer-brand .name {
-      font-family: 'Shippori Mincho', serif;
-      font-size: 18px;
-      color: white;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .footer-brand p { font-size: 12.5px; line-height: 1.9; }
-
-    .footer-nav { display: flex; gap: 56px; }
-
-    .footer-nav-col h5 {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      color: var(--teal2);
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-
-    .footer-nav-col a {
-      display: block;
-      color: rgba(255,255,255,0.5);
-      text-decoration: none;
-      font-size: 12.5px;
-      margin-bottom: 8px;
-      transition: color 0.2s;
-    }
-    .footer-nav-col a:hover { color: rgba(255,255,255,0.9); }
-
-    .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 11.5px;
-    }
-
-    .footer-links { display: flex; gap: 20px; }
-    .footer-links a {
-      color: rgba(255,255,255,0.35);
-      text-decoration: none;
-      font-size: 11px;
-    }
-    .footer-links a:hover { color: rgba(255,255,255,0.7); }
-
-    /* ===== RESPONSIVE ===== */
+    #symptoms .symptom-card { grid-column: span 3; }
+    #symptoms .symptom-card:nth-child(5),
+    #symptoms .symptom-card:nth-child(6),
+    #symptoms .symptom-card:nth-child(7) { grid-column: span 4; }
     @media (max-width: 960px) {
-      header { padding: 12px 20px; }
-      nav a:not(.nav-cta) { display: none; }
-      .hero-inner { padding: 120px 24px 80px; }
-      .about-layout { flex-direction: column; align-items: center; }
-      .about-photo { width: 100%; max-width: 360px; aspect-ratio: 3/4; font-size: 48px; }
-      .symptoms-grid { grid-template-columns: repeat(2, 1fr); }
-      .flow-steps { grid-template-columns: 1fr; }
-      .flow-steps::before { display: none; }
-      .flow-step { flex-direction: row; text-align: left; gap: 20px; margin-bottom: 14px; }
-      .flow-circle { flex-shrink: 0; margin-bottom: 0; }
-      .voices-grid { grid-template-columns: 1fr; }
-      .area-layout { grid-template-columns: 1fr; }
-      .contact-cards { grid-template-columns: 1fr; }
-      .facility-cards { grid-template-columns: 1fr; }
-      .footer-top { flex-direction: column; }
-      .footer-nav { flex-direction: column; gap: 24px; }
-      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-      .float-cta { bottom: 16px; right: 16px; }
+      #symptoms .symptom-card { grid-column: span 6; }
+      #symptoms .symptom-card:nth-child(5),
+      #symptoms .symptom-card:nth-child(6),
+      #symptoms .symptom-card:nth-child(7) { grid-column: span 6; }
     }
-
     @media (max-width: 600px) {
-      .symptoms-grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 30px; }
+      #symptoms .symptom-card,
+      #symptoms .symptom-card:nth-child(5),
+      #symptoms .symptom-card:nth-child(6),
+      #symptoms .symptom-card:nth-child(7) { grid-column: span 12; }
     }
   </style>
 </head>
@@ -899,13 +34,7 @@
 <header>
   <a href="#" class="logo">
     <div class="logo-mark">
-      <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="22" cy="17" r="12" fill="#3a9ab8" opacity="0.95"/>
-        <circle cx="14" cy="33" r="7" fill="#4aaecb" opacity="0.8"/>
-        <circle cx="30" cy="33" r="7" fill="#6ec9aa" opacity="0.85"/>
-        <circle cx="22" cy="17" r="5" fill="white" opacity="0.3"/>
-        <ellipse cx="18.5" cy="12.5" rx="2.8" ry="1.8" fill="white" opacity="0.45" transform="rotate(-20 18.5 12.5)"/>
-      </svg>
+      <img src="logo.png" alt="訪問フットケア みずたま ロゴ" style="width:48px; height:48px; object-fit:contain;" />
     </div>
     <div class="logo-text">
       <span class="sub">Visiting Foot Care</span>
@@ -913,12 +42,11 @@
     </div>
   </a>
   <nav>
-    <a href="#about">みずたまとは</a>
-    <a href="#symptoms">対応症状</a>
-    <a href="#services">料金</a>
-    <a href="#flow">ご利用の流れ</a>
-    <a href="#area">対応エリア</a>
-    <a href="#contact" class="nav-cta">お問い合わせ</a>
+    <a href="about.html">私について</a>
+    <a href="services.html">サービス・料金</a>
+    <a href="area.html">対応エリア</a>
+    <a href="faq.html">よくある質問</a>
+    <a href="contact.html" class="nav-cta">お問い合わせ</a>
   </nav>
 </header>
 
@@ -934,26 +62,18 @@
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-badge">💧 南大阪・訪問専門フットケアサービス</div>
+      <div class="hero-badge">💧 南大阪・訪問専門フットケア</div>
       <h1>
-        足は、<br/>
-        <span class="catch-accent">嘘をつきません。</span>
+        看護師が届ける<br/>
+        <span class="catch-accent">足爪ケア</span>
       </h1>
       <p class="hero-sub">
-        看護師の目で、あなたの足の「サイン」を読み解きます。<br/>
-        爪・角質・保湿・むくみ——<br/>
+        巻き爪・タコ・肥厚爪・角質など、足のお悩み、おまかせください。<br/>
         ご自宅や施設へお伺いし、丁寧にケアいたします。
       </p>
       <div class="hero-btns">
         <a href="#contact" class="btn-hero-primary">✉️ 無料相談をする</a>
         <a href="#services" class="btn-hero-secondary">料金・サービスを見る</a>
-      </div>
-      <div class="hero-nurse-badge">
-        <div class="nurse-icon">👩‍⚕️</div>
-        <div class="nurse-text">
-          <div class="t">QUALIFICATION</div>
-          <div class="b">看護師歴20年 ／ 開業届提出済み（2026年4月）</div>
-        </div>
       </div>
     </div>
   </div>
@@ -967,33 +87,28 @@
         <img src="about-photo.jpg" alt="訪問フットケアみずたま 代表" onerror="this.style.display='none'; this.parentNode.querySelector('.photo-placeholder').style.display='flex';" />
         <div class="photo-placeholder" style="display:none; width:100%; height:100%; align-items:center; justify-content:center; font-size:80px;">🦶</div>
         <div class="about-photo-label">
-          <div class="name">代表　〇〇 〇〇（タミー）</div>
-          <div class="title">看護師免許 ／ フットケア専門</div>
+          <div class="name">代表　<ruby>村瀬<rt>むらせ</rt></ruby>　<ruby>環水<rt>たまみ</rt></ruby></div>
+          <div class="title">看護師・フスフレーガー</div>
         </div>
       </div>
       <div class="about-text">
         <span class="sec-label">About</span>
-        <h2 class="sec-title">みずたまとは</h2>
+        <h2 class="sec-title">足のトラブルは、全身に影響します。</h2>
         <p class="sec-desc">
-          「水は低きに流れ、すべてに行き渡る」——<br/>
-          そのように、足元の困りごとを抱えるすべての方のそばへ、
-          静かに、確かに寄り添いたいという想いから生まれました。<br/><br/>
-          看護師として20年、足のトラブルを抱える患者さんを数多く診てきました。
-          病院では時間が取れず、十分なケアができないもどかしさを感じ続けてきました。
-          だからこそ、ご自宅や施設へ伺い、
-          <strong>時間をかけて、一人ひとりの足と向き合う</strong>サービスを始めました。
+          20年間、看護師として患者さんのそばにいました。病棟でも、訪問先でも、いつも気になっていたのは「足」でした。
         </p>
+        <p class="sec-desc">
+          足のトラブルは「たかが爪」「たかがタコ」ではありません。放置すると歩き方が変わり、膝・腰に負担がかかり、転倒リスクが高まり、やがて外出が難しくなります。それなのに、足を丁寧に見てもらえる場所が、あまりにも少ない。
+        </p>
+        <p class="sec-desc">
+          みずたまは、そこから生まれました。ご自宅や施設へお伺いし、時間をかけて足と向き合う——それだけを、ていねいにやります。
+        </p>
+        <p class="sec-desc" style="margin-top: 8px; color: var(--teal); font-size: 13px;">— 代表　村瀬環水</p>
         <div class="about-chips">
-          <span class="chip">看護師免許</span>
-          <span class="chip">看護師歴20年</span>
+          <span class="chip">看護師免許保有</span>
+          <span class="chip">看護師歴20年以上</span>
+          <span class="chip">病棟・訪問看護経験</span>
           <span class="chip">フットケア専門研修修了</span>
-          <span class="chip">開業届提出済み（2026年4月）</span>
-          <span class="chip">訪問・施設対応</span>
-        </div>
-        <div class="about-quote">
-          足の状態は、体全体の健康のバロメーターです。<br/>
-          あなたの足が発している「サイン」に、私が気づきます。
-          <div class="about-quote-sig">— 代表 〇〇 〇〇</div>
         </div>
       </div>
     </div>
@@ -1008,43 +123,152 @@
       <h2 class="sec-title">こんな足のお悩みに対応します</h2>
       <p class="sec-desc">「病院に行くほどでもない」そのお悩み、みずたまにご相談ください。<br/>看護師ならではの視点で、安全・丁寧にケアいたします。</p>
     </div>
-    <div class="symptoms-grid">
+    <div class="symptoms-grid" style="display:grid; grid-template-columns:repeat(12,1fr); gap:24px;">
+
+      <!-- 1. 巻き爪: 正面から見た爪が皮膚に食い込む様子 -->
       <div class="symptom-card">
-        <span class="symptom-icon">🌀</span>
+        <span class="symptom-icon">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- 指の断面（正面）-->
+            <rect x="12" y="30" width="32" height="18" rx="10" fill="#fce4cc" stroke="#c8845a" stroke-width="2.5"/>
+            <!-- 爪（アーチ状に湾曲） -->
+            <path d="M12 35 C12 20 44 20 44 35" fill="#d4ebf7" stroke="#4a9ecb" stroke-width="2.5"/>
+            <!-- 爪の端が皮膚に食い込む（左）-->
+            <path d="M12 35 L10 40 L13 46" stroke="#e53935" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <!-- 爪の端が皮膚に食い込む（右）-->
+            <path d="M44 35 L46 40 L43 46" stroke="#e53935" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <!-- 炎症（赤い点）-->
+            <circle cx="11" cy="44" r="3.5" fill="#e53935" opacity="0.8"/>
+            <circle cx="45" cy="44" r="3.5" fill="#e53935" opacity="0.8"/>
+          </svg>
+        </span>
         <h3>巻き爪</h3>
-        <p>痛みで歩くのが辛い、靴が履けないなど。
-          爪の状態を観察し、適切なケアで日常生活をサポートします。</p>
+        <p>爪が皮膚に食い込んで痛みが出る状態です。放置すると炎症や歩行困難につながることも。爪の形・生え方を観察し、状態に合ったケアで日常生活をサポートします。</p>
       </div>
+
+      <!-- 2. 肥厚爪: 横から見た異常に厚い爪 -->
       <div class="symptom-card">
-        <span class="symptom-icon">🦷</span>
+        <span class="symptom-icon">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- 指先（横断面）-->
+            <rect x="8" y="38" width="40" height="12" rx="6" fill="#fce4cc" stroke="#c8845a" stroke-width="2.5"/>
+            <!-- 異常に厚い爪（3層構造で分かりやすく） -->
+            <rect x="8" y="26" width="40" height="14" rx="3" fill="#b8d8f0" stroke="#4a9ecb" stroke-width="2"/>
+            <rect x="8" y="16" width="40" height="12" rx="3" fill="#cce4f7" stroke="#4a9ecb" stroke-width="2"/>
+            <rect x="10" y="8" width="36" height="10" rx="3" fill="#dff0fb" stroke="#4a9ecb" stroke-width="2"/>
+            <!-- 「厚い」を示す二重矢印 -->
+            <line x1="4" y1="8" x2="4" y2="50" stroke="#888" stroke-width="1.5"/>
+            <line x1="2" y1="8" x2="6" y2="8" stroke="#888" stroke-width="1.5"/>
+            <line x1="2" y1="50" x2="6" y2="50" stroke="#888" stroke-width="1.5"/>
+          </svg>
+        </span>
         <h3>肥厚爪（ひこうつめ）</h3>
-        <p>厚くなった爪は自分では切れない方が多くいます。
-          専門の器具を使い、安全に整えます。</p>
+        <p>加齢や外傷などで爪が厚く硬くなり、ご自分では切れなくなった状態です。専門器具で安全に整え、爪のトラブルを予防します。</p>
       </div>
+
+      <!-- 3. タコ・ウオノメ: 足の裏（俯瞰）＋同心円の硬化部分 -->
       <div class="symptom-card">
-        <span class="symptom-icon">🦶</span>
+        <span class="symptom-icon">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- 足の甲（俯瞰）-->
+            <ellipse cx="26" cy="38" rx="14" ry="11" fill="#fce4cc" stroke="#c8845a" stroke-width="2.5"/>
+            <!-- 指 -->
+            <ellipse cx="13" cy="25" rx="3.5" ry="5" fill="#fce4cc" stroke="#c8845a" stroke-width="2"/>
+            <ellipse cx="20" cy="22" rx="4" ry="5.5" fill="#fce4cc" stroke="#c8845a" stroke-width="2"/>
+            <ellipse cx="28" cy="21" rx="3.5" ry="5" fill="#fce4cc" stroke="#c8845a" stroke-width="2"/>
+            <ellipse cx="36" cy="23" rx="3" ry="4.5" fill="#fce4cc" stroke="#c8845a" stroke-width="2"/>
+            <ellipse cx="43" cy="27" rx="2.5" ry="4" fill="#fce4cc" stroke="#c8845a" stroke-width="2"/>
+            <!-- タコ・ウオノメ（同心円で硬化を表現）-->
+            <circle cx="22" cy="35" r="8" fill="#e8b870" stroke="#c89040" stroke-width="2"/>
+            <circle cx="22" cy="35" r="5" fill="#d4924e" stroke="#a86e30" stroke-width="1.5"/>
+            <circle cx="22" cy="35" r="2.5" fill="#8b5220"/>
+          </svg>
+        </span>
         <h3>タコ・ウオノメ</h3>
-        <p>圧迫・摩擦が続いてできた硬い角質。
-          痛みなく除去し、再発予防のアドバイスもします。</p>
+        <p>長期間の圧迫・摩擦で皮膚が硬くなった状態です。タコは広い範囲、ウオノメは芯をもつのが特徴。専用器具でできる限り負担を抑えながら除去し、再発防止のアドバイスも行います。</p>
       </div>
+
+      <!-- 4. 爪切り困難: はさみ＋爪 -->
       <div class="symptom-card">
-        <span class="symptom-icon">✂️</span>
+        <span class="symptom-icon">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- はさみの輪（左）-->
+            <circle cx="12" cy="46" r="7" fill="none" stroke="#546e7a" stroke-width="3"/>
+            <!-- はさみの輪（右）-->
+            <circle cx="26" cy="46" r="7" fill="none" stroke="#546e7a" stroke-width="3"/>
+            <!-- 左の刃 -->
+            <line x1="17" y1="40" x2="44" y2="16" stroke="#607d8b" stroke-width="3" stroke-linecap="round"/>
+            <!-- 右の刃 -->
+            <line x1="31" y1="40" x2="44" y2="20" stroke="#607d8b" stroke-width="3" stroke-linecap="round"/>
+            <!-- 切っている爪 -->
+            <rect x="36" y="8" width="16" height="8" rx="4" fill="#d4ebf7" stroke="#4a9ecb" stroke-width="2.5"/>
+          </svg>
+        </span>
         <h3>爪切り（困難な方）</h3>
-        <p>視力・腰痛・関節の問題で自分では切れない方へ。
-          定期的な爪切りで、転倒予防・清潔維持を支援します。</p>
+        <p>視力低下・腰痛・関節の変形などで、ご自身での爪切りが難しくなった方へ。定期的なケアで爪の伸び過ぎによる転倒リスクを防ぎ、清潔を保ちます。</p>
       </div>
+
+      <!-- 5. 乾燥・ひび割れ: かかとのシルエット＋亀裂線 -->
       <div class="symptom-card">
-        <span class="symptom-icon">💧</span>
+        <span class="symptom-icon">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- かかとのシルエット（横から）-->
+            <path d="M8 50 Q8 32 18 22 Q26 14 36 16 Q46 18 48 30 Q50 40 46 50 Z" fill="#fce4cc" stroke="#c8845a" stroke-width="2.5"/>
+            <!-- ひび割れ線（ジグザグ）-->
+            <path d="M20 46 L23 38 L19 31 L23 24" stroke="#8d5030" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M31 48 L34 40 L30 33 L33 26" stroke="#8d5030" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M40 48 L43 42 L39 37" stroke="#8d5030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
         <h3>乾燥・ひび割れ</h3>
-        <p>かかとのひび割れや乾燥は、皮膚の感染リスクにも。
-          保湿ケアと日常のセルフケア方法をお伝えします。</p>
+        <p>かかとや足裏の乾燥・ひび割れは、皮膚バリアが崩れて細菌感染につながるリスクがあります。保湿ケアを丁寧に行い、日常でのセルフケア方法もお伝えします。</p>
       </div>
+
+      <!-- 6. 糖尿病の足ケア: 足＋赤十字（医療） -->
       <div class="symptom-card">
-        <span class="symptom-icon">🩺</span>
+        <span class="symptom-icon">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- 足（俯瞰）-->
+            <ellipse cx="26" cy="38" rx="13" ry="10" fill="#fce4cc" stroke="#c8845a" stroke-width="2.5"/>
+            <!-- 指 -->
+            <ellipse cx="13" cy="26" rx="3" ry="4.5" fill="#fce4cc" stroke="#c8845a" stroke-width="2"/>
+            <ellipse cx="20" cy="23" rx="3.5" ry="5" fill="#fce4cc" stroke="#c8845a" stroke-width="2"/>
+            <ellipse cx="28" cy="22" rx="3" ry="4.5" fill="#fce4cc" stroke="#c8845a" stroke-width="2"/>
+            <ellipse cx="35" cy="24" rx="2.5" ry="4" fill="#fce4cc" stroke="#c8845a" stroke-width="2"/>
+            <ellipse cx="41" cy="28" rx="2" ry="3.5" fill="#fce4cc" stroke="#c8845a" stroke-width="2"/>
+            <!-- 医療十字（赤）-->
+            <rect x="20" y="35" width="12" height="4" rx="2" fill="#e53935"/>
+            <rect x="23" y="32" width="4" height="10" rx="2" fill="#e53935"/>
+          </svg>
+        </span>
         <h3>糖尿病の方の足ケア</h3>
-        <p>糖尿病の方の足は特にデリケートです。
-          看護師が医療的視点でリスクを確認しながら安全にケアします。</p>
+        <p>糖尿病による神経障害・血流障害で、足の小さな傷が重症化するリスクがあります。看護師が医療的な視点で足の状態を観察しながら、安全に配慮してケアします。</p>
       </div>
+
+      <!-- 7. リフレクソロジー: 足裏＋反射区ゾーン＋波線 -->
+      <div class="symptom-card">
+        <span class="symptom-icon">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- 足裏（俯瞰）-->
+            <ellipse cx="24" cy="38" rx="13" ry="11" fill="#fce4cc" stroke="#c8845a" stroke-width="2.5"/>
+            <!-- 指 -->
+            <ellipse cx="12" cy="25" rx="3" ry="4.5" fill="#fce4cc" stroke="#c8845a" stroke-width="2"/>
+            <ellipse cx="19" cy="22" rx="3.5" ry="5" fill="#fce4cc" stroke="#c8845a" stroke-width="2"/>
+            <ellipse cx="27" cy="21" rx="3" ry="4.5" fill="#fce4cc" stroke="#c8845a" stroke-width="2"/>
+            <ellipse cx="34" cy="23" rx="2.5" ry="4" fill="#fce4cc" stroke="#c8845a" stroke-width="2"/>
+            <!-- 反射区ゾーン線（破線）-->
+            <line x1="12" y1="31" x2="36" y2="31" stroke="#7e57c2" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.8"/>
+            <line x1="12" y1="38" x2="36" y2="38" stroke="#7e57c2" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.8"/>
+            <line x1="12" y1="45" x2="36" y2="45" stroke="#7e57c2" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.8"/>
+            <!-- 気の流れ・波線（右側）-->
+            <path d="M42 28 Q46 24 42 20" stroke="#7e57c2" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M47 32 Q51 27 47 22" stroke="#7e57c2" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.65"/>
+          </svg>
+        </span>
+        <h3>リフレクソロジー</h3>
+        <p>足裏の反射区を刺激することで、全身の血流促進・疲労回復・自律神経の調整をサポートします。リラクゼーション効果も高く、ケアと組み合わせることでより効果的です。</p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1063,42 +287,33 @@
 
     <!-- 個人向け -->
     <div class="tab-panel active" id="tab-personal">
-      <table class="price-table">
-        <thead>
-          <tr>
-            <th style="width:35%">メニュー</th>
-            <th>内容</th>
-            <th style="width:20%">料金（税込）</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>フットケア基本コース</strong></td>
-            <td>爪切り・角質ケア・保湿ケア（所要時間：約60分）</td>
-            <td class="price-tag">¥5,500</td>
-          </tr>
-          <tr>
-            <td><strong>爪切りのみ</strong></td>
-            <td>爪のカット・ファイリング（約30分）</td>
-            <td class="price-tag">¥3,300</td>
-          </tr>
-          <tr>
-            <td><strong>角質ケアのみ</strong></td>
-            <td>タコ・ウオノメ・かかとのケア（約30分）</td>
-            <td class="price-tag">¥3,300</td>
-          </tr>
-          <tr>
-            <td><strong>フットケア＋マッサージ</strong></td>
-            <td>基本コース＋フットマッサージ（約90分）</td>
-            <td class="price-tag">¥7,700</td>
-          </tr>
-          <tr>
-            <td><strong>定期ケアプラン（月1回）</strong></td>
-            <td>月1回の定期訪問（基本コース）</td>
-            <td class="price-tag">¥4,950<small>/月</small></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="price-cards">
+        <div class="price-card">
+          <div class="price-card-name">フットケア基本コース</div>
+          <div class="price-card-desc">爪切り・角質ケア・保湿ケア<br/>所要時間：約60分</div>
+          <div class="price-card-price">¥5,500<small>（税込）</small></div>
+        </div>
+        <div class="price-card">
+          <div class="price-card-name">爪切りのみ</div>
+          <div class="price-card-desc">爪のカット・ファイリング<br/>所要時間：約30分</div>
+          <div class="price-card-price">¥3,300<small>（税込）</small></div>
+        </div>
+        <div class="price-card">
+          <div class="price-card-name">角質ケアのみ</div>
+          <div class="price-card-desc">タコ・ウオノメ・かかとのケア<br/>所要時間：約30分</div>
+          <div class="price-card-price">¥3,300<small>（税込）</small></div>
+        </div>
+        <div class="price-card">
+          <div class="price-card-name">フットケア＋マッサージ</div>
+          <div class="price-card-desc">基本コース＋フットマッサージ<br/>所要時間：約90分</div>
+          <div class="price-card-price">¥7,700<small>（税込）</small></div>
+        </div>
+        <div class="price-card">
+          <div class="price-card-name">定期ケアプラン（月1回）</div>
+          <div class="price-card-desc">月1回の定期訪問（基本コース）</div>
+          <div class="price-card-price">¥4,950<small>（税込）/月</small></div>
+        </div>
+      </div>
       <div class="price-note">
         ※ 上記料金に交通費は含まれません（河内長野市内は無料、他エリアは別途ご相談）<br/>
         ※ 料金はすべて仮設定です。正式な料金は確定次第更新します。<br/>
@@ -1145,6 +360,9 @@
             <li>施設ケアプランへの情報提供も対応</li>
             <li>感染対策・器具滅菌を徹底</li>
             <li>ケアマネジャーへの報告書作成も可</li>
+            <li>オンラインでの初回相談・施設見学も対応</li>
+            <li>ご利用者様の満足度向上につながる専門ケア</li>
+            <li>施設サービスの付加価値向上をサポート</li>
           </ul>
         </div>
       </div>
@@ -1157,161 +375,266 @@
 </section>
 
 <!-- ===== FLOW ===== -->
-<section id="flow">
+<section id="flow" style="background: var(--pale);">
   <div class="section-inner">
     <div class="sec-header-center">
-      <span class="sec-label">How to use</span>
+      <span class="sec-label">How to Use</span>
       <h2 class="sec-title">ご利用の流れ</h2>
-      <p class="sec-desc">お電話一本から。準備は何も必要ありません。</p>
+      <p class="sec-desc">お電話一本から。特別な準備は何も必要ありません。</p>
     </div>
-    <div class="flow-steps">
-      <div class="flow-step">
-        <div class="flow-circle"><span class="sn">STEP</span><span class="si">1</span></div>
-        <div>
-          <h4>📞 ご相談・お問い合わせ</h4>
-          <p>電話・メール・LINEでお気軽に。初回相談は無料です。</p>
-        </div>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-top: 8px;">
+
+      <div style="background: var(--white); border-radius: 20px; padding: 28px 20px; text-align: center; position: relative;">
+        <div style="width: 44px; height: 44px; background: var(--teal2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; font-size: 18px; font-weight: 800; color: white; font-family: 'Shippori Mincho', serif;">1</div>
+        <div style="font-size: 26px; margin-bottom: 10px;">📞</div>
+        <h3 style="font-family: 'Shippori Mincho', serif; font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px;">お問い合わせ</h3>
+        <p style="font-size: 12px; color: var(--gray); line-height: 1.8;">電話・メール・LINEでお気軽に。初回相談は無料です。</p>
+        <div style="position: absolute; right: -12px; top: 44%; font-size: 18px; color: var(--teal2); z-index: 1;">›</div>
       </div>
-      <div class="flow-step">
-        <div class="flow-circle"><span class="sn">STEP</span><span class="si">2</span></div>
-        <div>
-          <h4>📅 日程・場所の決定</h4>
-          <p>ご希望の日時と訪問先（ご自宅・施設）を確認します。</p>
-        </div>
+
+      <div style="background: var(--white); border-radius: 20px; padding: 28px 20px; text-align: center; position: relative;">
+        <div style="width: 44px; height: 44px; background: var(--teal2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; font-size: 18px; font-weight: 800; color: white; font-family: 'Shippori Mincho', serif;">2</div>
+        <div style="font-size: 26px; margin-bottom: 10px;">📅</div>
+        <h3 style="font-family: 'Shippori Mincho', serif; font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px;">日程・内容の確認</h3>
+        <p style="font-size: 12px; color: var(--gray); line-height: 1.8;">お悩みをヒアリングし、訪問日時と内容を決めます。</p>
+        <div style="position: absolute; right: -12px; top: 44%; font-size: 18px; color: var(--teal2); z-index: 1;">›</div>
       </div>
-      <div class="flow-step">
-        <div class="flow-circle"><span class="sn">STEP</span><span class="si">3</span></div>
-        <div>
-          <h4>🏠 スタッフが訪問</h4>
-          <p>必要な器具を持参します。特別な準備は不要です。</p>
-        </div>
+
+      <div style="background: var(--white); border-radius: 20px; padding: 28px 20px; text-align: center; position: relative;">
+        <div style="width: 44px; height: 44px; background: var(--teal2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; font-size: 18px; font-weight: 800; color: white; font-family: 'Shippori Mincho', serif;">3</div>
+        <div style="font-size: 26px; margin-bottom: 10px;">🚗</div>
+        <h3 style="font-family: 'Shippori Mincho', serif; font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px;">訪問・アセスメント</h3>
+        <p style="font-size: 12px; color: var(--gray); line-height: 1.8;">ご自宅・施設へ伺い、まず足の状態をしっかり確認します。</p>
+        <div style="position: absolute; right: -12px; top: 44%; font-size: 18px; color: var(--teal2); z-index: 1;">›</div>
       </div>
-      <div class="flow-step">
-        <div class="flow-circle"><span class="sn">STEP</span><span class="si">4</span></div>
-        <div>
-          <h4>🦶 ケア実施（約60分）</h4>
-          <p>足の状態を観察しながら、丁寧にケアを行います。</p>
-        </div>
+
+      <div style="background: var(--white); border-radius: 20px; padding: 28px 20px; text-align: center; position: relative;">
+        <div style="width: 44px; height: 44px; background: var(--teal2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; font-size: 18px; font-weight: 800; color: white; font-family: 'Shippori Mincho', serif;">4</div>
+        <div style="font-size: 26px; margin-bottom: 10px;">🦶</div>
+        <h3 style="font-family: 'Shippori Mincho', serif; font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px;">フットケア実施</h3>
+        <p style="font-size: 12px; color: var(--gray); line-height: 1.8;">爪・角質・保湿など、状態に合ったケアをていねいに行います。</p>
+        <div style="position: absolute; right: -12px; top: 44%; font-size: 18px; color: var(--teal2); z-index: 1;">›</div>
       </div>
-      <div class="flow-step">
-        <div class="flow-circle"><span class="sn">STEP</span><span class="si">5</span></div>
-        <div>
-          <h4>💝 アドバイス・次回予約</h4>
-          <p>日常ケアのアドバイスをお伝えし、定期サポートをご提案します。</p>
-        </div>
+
+      <div style="background: var(--white); border-radius: 20px; padding: 28px 20px; text-align: center;">
+        <div style="width: 44px; height: 44px; background: var(--navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; font-size: 18px; font-weight: 800; color: white; font-family: 'Shippori Mincho', serif;">5</div>
+        <div style="font-size: 26px; margin-bottom: 10px;">💝</div>
+        <h3 style="font-family: 'Shippori Mincho', serif; font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px;">アドバイス・次回予約</h3>
+        <p style="font-size: 12px; color: var(--gray); line-height: 1.8;">日常ケアのコツをお伝えし、定期サポートをご提案します。</p>
       </div>
+
+    </div>
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="contact.html" class="btn-primary">✉️ まずは無料相談する</a>
     </div>
   </div>
 </section>
 
-<!-- ===== VOICE ===== -->
-<section id="voice">
+<!-- ===== WHY MIZUTAMA（案1：選ばれる理由） ===== -->
+<section id="why" style="background: var(--white);">
   <div class="section-inner">
     <div class="sec-header-center">
-      <span class="sec-label">Voice</span>
-      <h2 class="sec-title">ご利用者様のお声</h2>
-      <p class="sec-desc">実際にご利用いただいた方からの声をご紹介します（掲載許可済み・仮文）。</p>
+      <span class="sec-label">Why Mizutama</span>
+      <h2 class="sec-title">みずたまが選ばれる理由</h2>
+      <p class="sec-desc">看護師だからできる、訪問フットケアがあります。</p>
     </div>
-    <div class="voices-grid">
-      <div class="voice-card">
-        <div class="voice-stars">★★★★★</div>
-        <p>母が巻き爪で痛がっていたのに、病院に連れていくのが大変で困っていました。
-          みずたまさんに来ていただいてから、母が「足が楽になった」と笑顔で言ってくれて。
-          看護師さんが来てくれるという安心感が違います。</p>
-        <div class="voice-from">
-          <div class="voice-avatar">👩</div>
-          <div>
-            <div class="voice-name">河内長野市 Sさん（70代女性のご家族）</div>
-            <div class="voice-attr">月1回の定期ご利用</div>
-          </div>
-        </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 8px;">
+
+      <div style="background: var(--pale); border-radius: 20px; padding: 36px 28px; text-align: center;">
+        <div style="width: 72px; height: 72px; background: var(--navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 32px;">🩺</div>
+        <h3 style="font-family: 'Shippori Mincho', serif; font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 12px;">看護師免許を持つ専門家が担当</h3>
+        <p style="font-size: 13.5px; color: var(--gray); line-height: 1.9;">単なる爪切りではありません。20年のキャリアを持つ看護師が、足の状態を医療的視点でアセスメントしながらケア。異常があれば受診につなぎます。</p>
       </div>
-      <div class="voice-card">
-        <div class="voice-stars">★★★★★</div>
-        <p>デイサービスの利用者様に定期的に来ていただいています。
-          看護師免許をお持ちなので、糖尿病の方への対応も安心してお任せできます。
-          記録も丁寧に提供してくださり、スタッフも助かっています。</p>
-        <div class="voice-from">
-          <div class="voice-avatar">👨‍💼</div>
-          <div>
-            <div class="voice-name">富田林市 Kさん（デイサービス施設長）</div>
-            <div class="voice-attr">定期訪問プランご利用</div>
-          </div>
-        </div>
+
+      <div style="background: var(--pale); border-radius: 20px; padding: 36px 28px; text-align: center;">
+        <div style="width: 72px; height: 72px; background: var(--teal2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 32px;">🏠</div>
+        <h3 style="font-family: 'Shippori Mincho', serif; font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 12px;">ご自宅・施設へ訪問するから移動不要</h3>
+        <p style="font-size: 13.5px; color: var(--gray); line-height: 1.9;">外出が難しい方、交通手段がない方も安心。ご自宅や入居施設へスタッフが伺います。慣れた環境でリラックスしてケアをお受けいただけます。</p>
       </div>
-      <div class="voice-card">
-        <div class="voice-stars">★★★★★</div>
-        <p>父が自分で爪が切れなくなってしまい、困っていました。
-          自宅に来ていただけるので、移動の負担がなく本当に助かります。
-          丁寧に話を聞いてくれて、足以外の健康相談にも乗ってもらっています。</p>
-        <div class="voice-from">
-          <div class="voice-avatar">👦</div>
-          <div>
-            <div class="voice-name">大阪狭山市 Yさん（80代男性のご家族）</div>
-            <div class="voice-attr">爪切り定期ご利用</div>
-          </div>
-        </div>
+
+      <div style="background: var(--pale); border-radius: 20px; padding: 36px 28px; text-align: center;">
+        <div style="width: 72px; height: 72px; background: var(--mint); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 32px;">⏱️</div>
+        <h3 style="font-family: 'Shippori Mincho', serif; font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 12px;">時間をかけた、ていねいなケア</h3>
+        <p style="font-size: 13.5px; color: var(--gray); line-height: 1.9;">病院や施設では時間が限られ、足のケアは後回しになりがち。みずたまはお一人おひとりのために十分な時間を確保し、丁寧に向き合います。</p>
       </div>
-      <div class="voice-card">
-        <div class="voice-stars">★★★★★</div>
-        <p>担当しているご利用者様にお勧めしたところ、喜んでいただけました。
-          看護師さんが訪問してくれるので、医療的な視点からの足の観察も
-          ケアプランを立てる際の参考になっています。信頼できます。</p>
-        <div class="voice-from">
-          <div class="voice-avatar">👩‍💼</div>
-          <div>
-            <div class="voice-name">河内長野市 Mさん（担当ケアマネジャー）</div>
-            <div class="voice-attr">複数のご利用者様をご紹介</div>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
+
 
 <!-- ===== AREA ===== -->
-<section id="area">
+<section id="area" style="background: var(--white);">
   <div class="section-inner">
-    <span class="sec-label">Area</span>
-    <h2 class="sec-title">対応エリア</h2>
-    <p class="sec-desc">南大阪を中心に訪問しています。<br/>記載エリア外もお気軽にご相談ください。</p>
-    <div class="area-layout">
-      <div class="area-cities">
-        <ul class="area-city-list">
-          <li class="area-city">
-            <span class="area-city-icon">📍</span>
-            <div>
-              <div class="area-city-name">河内長野市</div>
-              <div class="area-city-note">全域対応・交通費無料</div>
-            </div>
-          </li>
-          <li class="area-city">
-            <span class="area-city-icon">📍</span>
-            <div>
-              <div class="area-city-name">富田林市</div>
-              <div class="area-city-note">全域対応</div>
-            </div>
-          </li>
-          <li class="area-city">
-            <span class="area-city-icon">📍</span>
-            <div>
-              <div class="area-city-name">大阪狭山市</div>
-              <div class="area-city-note">全域対応</div>
-            </div>
-          </li>
-        </ul>
-        <div class="area-note">
-          📌 上記エリア外（和泉市・岸和田市・堺市南区など）も対応可能な場合があります。<br/>
-          お気軽にお問い合わせください。交通費については別途ご相談いたします。
+    <div class="sec-header-center">
+      <span class="sec-label">Service Area</span>
+      <h2 class="sec-title">対応エリア</h2>
+      <p class="sec-desc">南大阪を中心に、ご自宅・施設へ訪問します。<br/>エリア外もお気軽にご相談ください。</p>
+    </div>
+
+    <!-- メイン3市カード -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 32px;">
+
+      <div style="background: var(--pale); border-radius: 20px; padding: 32px 28px; border-top: 4px solid var(--teal2);">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+          <span style="font-size: 24px;">📍</span>
+          <h3 style="font-family: 'Shippori Mincho', serif; font-size: 20px; font-weight: 700; color: var(--navy);">河内長野市</h3>
+          <span style="background: var(--teal2); color: white; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 50px;">交通費無料</span>
         </div>
+        <p style="font-size: 13.5px; color: var(--gray); line-height: 1.9; margin-bottom: 14px;">みずたまの拠点があるメインエリア。市内全域に交通費無料でお伺いします。</p>
+        <div style="font-size: 12.5px; color: var(--teal2); font-weight: 600;">千代田・長野・南花台・滝畑など市内全域</div>
       </div>
-      <div class="area-map-box">
-        <span class="map-ph">🗺️</span>
-        <p>
-          ここにGoogleマップが入ります<br/>
-          <small style="color:#94a3b8;">（埋め込みコードを後から挿入）</small>
-        </p>
+
+      <div style="background: var(--pale); border-radius: 20px; padding: 32px 28px; border-top: 4px solid var(--mint);">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+          <span style="font-size: 24px;">📍</span>
+          <h3 style="font-family: 'Shippori Mincho', serif; font-size: 20px; font-weight: 700; color: var(--navy);">富田林市</h3>
+          <span style="background: var(--mint); color: white; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 50px;">全域対応</span>
+        </div>
+        <p style="font-size: 13.5px; color: var(--gray); line-height: 1.9; margin-bottom: 14px;">市内全域に訪問可能です。交通費については別途ご相談ください。</p>
+        <div style="font-size: 12.5px; color: var(--teal2); font-weight: 600;">富田林駅周辺・金剛・藤沢台・喜志・彼方など</div>
       </div>
+
+      <div style="background: var(--pale); border-radius: 20px; padding: 32px 28px; border-top: 4px solid var(--navy);">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+          <span style="font-size: 24px;">📍</span>
+          <h3 style="font-family: 'Shippori Mincho', serif; font-size: 20px; font-weight: 700; color: var(--navy);">大阪狭山市</h3>
+          <span style="background: var(--navy); color: white; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 50px;">全域対応</span>
+        </div>
+        <p style="font-size: 13.5px; color: var(--gray); line-height: 1.9; margin-bottom: 14px;">市内全域に訪問可能です。交通費については別途ご相談ください。</p>
+        <div style="font-size: 12.5px; color: var(--teal2); font-weight: 600;">大阪狭山市駅周辺・半田・東野など市内全域</div>
+      </div>
+
+    </div>
+
+    <!-- エリア外・注記 -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+      <div style="background: #f0faf6; border-radius: 16px; padding: 24px 28px; border-left: 4px solid var(--mint);">
+        <div style="font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 10px;">📌 上記エリア外の方も相談可</div>
+        <p style="font-size: 13px; color: var(--gray); line-height: 1.9;">和泉市・岸和田市・堺市南区など近隣エリアも状況に応じて対応可能です。まずはお問い合わせください。交通費は別途ご相談となります。</p>
+      </div>
+      <div style="background: #fff8f0; border-radius: 16px; padding: 24px 28px; border-left: 4px solid #f6a623;">
+        <div style="font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 10px;">🏥 施設への訪問も対応</div>
+        <p style="font-size: 13px; color: var(--gray); line-height: 1.9;">介護施設・デイサービス・グループホームなどへの定期訪問も承っています。施設担当者様はお気軽にご相談ください。</p>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="area.html" class="btn-outline">対応エリアの詳細を見る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" style="background:var(--pale); padding:96px 24px;">
+  <div class="section-inner">
+    <div style="text-align:center; margin-bottom:60px;">
+      <span class="sec-label">FAQ</span>
+      <h2 class="sec-title">よくあるご質問</h2>
+      <p class="sec-desc" style="margin:0 auto;">お問い合わせの前に、よくいただく質問をまとめました。</p>
+    </div>
+    <div style="max-width:740px; margin:0 auto; display:flex; flex-direction:column; gap:14px;">
+
+      <details style="background:white; border-radius:16px; overflow:hidden; border:1px solid var(--border);">
+        <summary style="padding:20px 26px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:14px; font-size:14.5px; list-style:none;">
+          <span style="width:28px;height:28px;background:var(--teal);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">Q</span>
+          介護保険は使えますか？
+        </summary>
+        <div style="padding:18px 26px 22px 68px; font-size:13.5px; color:var(--gray); line-height:1.9;">
+          現在、訪問フットケアみずたまのサービスは<strong>全額自費（保険適用外）</strong>となります。介護保険の対象とはなりませんが、ケアマネジャーを通じてご利用者のケアプランに組み合わせていただくことは可能です。
+        </div>
+      </details>
+
+      <details style="background:white; border-radius:16px; overflow:hidden; border:1px solid var(--border);">
+        <summary style="padding:20px 26px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:14px; font-size:14.5px; list-style:none;">
+          <span style="width:28px;height:28px;background:var(--teal);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">Q</span>
+          訪問してもらうのに、何か準備が必要ですか？
+        </summary>
+        <div style="padding:18px 26px 22px 68px; font-size:13.5px; color:var(--gray); line-height:1.9;">
+          特別なご準備は不要です。ケア道具はすべてスタッフが持参します。足を拭くためのタオルと、ゆったり座れる椅子やベッドがあれば大丈夫です。
+        </div>
+      </details>
+
+      <details style="background:white; border-radius:16px; overflow:hidden; border:1px solid var(--border);">
+        <summary style="padding:20px 26px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:14px; font-size:14.5px; list-style:none;">
+          <span style="width:28px;height:28px;background:var(--teal);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">Q</span>
+          糖尿病があります。ケアを受けても大丈夫ですか？
+        </summary>
+        <div style="padding:18px 26px 22px 68px; font-size:13.5px; color:var(--gray); line-height:1.9;">
+          はい、対応しています。むしろ糖尿病をお持ちの方こそ、定期的な足のチェックが重要です。看護師がお体の状態を確認しながら、安全に配慮してケアを行います。ただし、傷・壊疽・重篤な感染症がある場合は医療機関への受診をご案内することがあります。
+        </div>
+      </details>
+
+      <details style="background:white; border-radius:16px; overflow:hidden; border:1px solid var(--border);">
+        <summary style="padding:20px 26px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:14px; font-size:14.5px; list-style:none;">
+          <span style="width:28px;height:28px;background:var(--teal);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">Q</span>
+          施設（デイサービス・老人ホームなど）への訪問はできますか？
+        </summary>
+        <div style="padding:18px 26px 22px 68px; font-size:13.5px; color:var(--gray); line-height:1.9;">
+          はい、対応しています。施設担当者様（管理者・ケアマネ等）とご相談のうえ、定期的な訪問プランをご提案します。複数名をまとめてケアする団体プランもございますので、お気軽にご相談ください。
+        </div>
+      </details>
+
+      <details style="background:white; border-radius:16px; overflow:hidden; border:1px solid var(--border);">
+        <summary style="padding:20px 26px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:14px; font-size:14.5px; list-style:none;">
+          <span style="width:28px;height:28px;background:var(--teal);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">Q</span>
+          1回の所要時間はどのくらいですか？
+        </summary>
+        <div style="padding:18px 26px 22px 68px; font-size:13.5px; color:var(--gray); line-height:1.9;">
+          基本コース（爪切り・角質ケア・保湿ケア）で約60分です。爪切りのみは約30分、マッサージを追加した場合は約90分が目安です。初回はヒアリングの時間も含めるため、やや長くなる場合があります。
+        </div>
+      </details>
+
+      <details style="background:white; border-radius:16px; overflow:hidden; border:1px solid var(--border);">
+        <summary style="padding:20px 26px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:14px; font-size:14.5px; list-style:none;">
+          <span style="width:28px;height:28px;background:var(--teal);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">Q</span>
+          どのくらいの頻度でケアを受けるのがいいですか？
+        </summary>
+        <div style="padding:18px 26px 22px 68px; font-size:13.5px; color:var(--gray); line-height:1.9;">
+          一般的には月1〜2回が目安ですが、爪の伸び具合や症状によって異なります。初回ケア後にご本人の状態を見てご提案しますので、まずはお気軽にお試しください。
+        </div>
+      </details>
+
+      <details style="background:white; border-radius:16px; overflow:hidden; border:1px solid var(--border);">
+        <summary style="padding:20px 26px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:14px; font-size:14.5px; list-style:none;">
+          <span style="width:28px;height:28px;background:var(--teal);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">Q</span>
+          対応エリア外でも依頼できますか？
+        </summary>
+        <div style="padding:18px 26px 22px 68px; font-size:13.5px; color:var(--gray); line-height:1.9;">
+          河内長野市・富田林市・大阪狭山市が基本エリアですが、近隣市町（和泉市・岸和田市・堺市南区など）も状況に応じてご対応できる場合があります。まずはお問い合わせください。交通費は別途ご相談となります。
+        </div>
+      </details>
+
+      <details style="background:white; border-radius:16px; overflow:hidden; border:1px solid var(--border);">
+        <summary style="padding:20px 26px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:14px; font-size:14.5px; list-style:none;">
+          <span style="width:28px;height:28px;background:var(--teal);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">Q</span>
+          支払い方法は何がありますか？
+        </summary>
+        <div style="padding:18px 26px 22px 68px; font-size:13.5px; color:var(--gray); line-height:1.9;">
+          現在は<strong>現金払いのみ</strong>対応しています。ケア終了後にお支払いください。今後キャッシュレス決済の導入も検討中です。
+        </div>
+      </details>
+
+      <details style="background:white; border-radius:16px; overflow:hidden; border:1px solid var(--border);">
+        <summary style="padding:20px 26px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:14px; font-size:14.5px; list-style:none;">
+          <span style="width:28px;height:28px;background:var(--teal);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">Q</span>
+          LINEでの写真相談とはどんなことができますか？
+        </summary>
+        <div style="padding:18px 26px 22px 68px; font-size:13.5px; color:var(--gray); line-height:1.9;">
+          爪や足の状態を写真に撮って送っていただくと、「これはどんなケアが必要か」「すぐに受診が必要か」など、看護師の視点からアドバイスします。まずは写真で相談してから予約される方も多いです。
+        </div>
+      </details>
+
+      <details style="background:white; border-radius:16px; overflow:hidden; border:1px solid var(--border);">
+        <summary style="padding:20px 26px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:14px; font-size:14.5px; list-style:none;">
+          <span style="width:28px;height:28px;background:var(--teal);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">Q</span>
+          キャンセルはいつまでにすればいいですか？
+        </summary>
+        <div style="padding:18px 26px 22px 68px; font-size:13.5px; color:var(--gray); line-height:1.9;">
+          ご予約日の前日までにご連絡ください。当日キャンセルはキャンセル料（施術料の50%）をいただく場合がございます。急なご体調不良など事情がある場合はご相談ください。
+        </div>
+      </details>
+
     </div>
   </div>
 </section>
@@ -1358,7 +681,7 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="name">💧 訪問フットケア みずたま</div>
+        <div class="name">訪問フットケア みずたま</div>
         <p>
           〒xxx-xxxx 大阪府河内長野市〇〇〇<br/>
           TEL: 000-0000-0000<br/>
@@ -1368,17 +691,16 @@
       <div class="footer-nav">
         <div class="footer-nav-col">
           <h5>サービス</h5>
-          <a href="#about">みずたまとは</a>
-          <a href="#symptoms">対応症状</a>
-          <a href="#services">料金・プラン</a>
-          <a href="#flow">ご利用の流れ</a>
+          <a href="about.html">私について</a>
+          <a href="services.html">サービス内容</a>
+          <a href="services.html">料金・プラン</a>
+          <a href="services.html#flow">ご利用の流れ</a>
         </div>
         <div class="footer-nav-col">
           <h5>情報</h5>
-          <a href="#voice">お客様の声</a>
-          <a href="#area">対応エリア</a>
-          <a href="#contact">お問い合わせ</a>
-          <a href="https://www.mizutama-care.com/">スタッフブログ</a>
+          <a href="area.html">対応エリア</a>
+          <a href="faq.html">よくある質問</a>
+          <a href="contact.html">お問い合わせ</a>
         </div>
       </div>
     </div>

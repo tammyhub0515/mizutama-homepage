@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>対応エリア｜訪問フットケア みずたま</title>
+  <meta name="description" content="訪問フットケアみずたまの対応エリア。河内長野市・富田林市・大阪狭山市を中心に南大阪全域で訪問対応。エリア外もご相談ください。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .area-detail-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 4px 24px rgba(27,63,92,0.08);
+      border-left: 5px solid var(--teal2);
+    }
+    .area-detail-card h3 {
+      font-family: 'Shippori Mincho', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .area-detail-card .tag {
+      font-size: 11px;
+      background: var(--teal2);
+      color: white;
+      padding: 3px 10px;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+    .area-detail-card p {
+      font-size: 13.5px;
+      color: var(--gray);
+      line-height: 1.9;
+      margin-top: 10px;
+    }
+    .area-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .transport-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .transport-card {
+      background: var(--pale);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .transport-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+    .transport-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .transport-card p {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.8;
+    }
+    @media (max-width: 960px) {
+      .area-detail-grid { grid-template-columns: 1fr; }
+      .transport-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-mark">
+      <img src="logo.png" alt="訪問フットケア みずたま ロゴ" style="width:48px; height:48px; object-fit:contain;" />
+    </div>
+    <div class="logo-text">
+      <span class="sub">Visiting Foot Care</span>
+      <span class="main">訪問フットケア みずたま</span>
+    </div>
+  </a>
+  <nav>
+    <a href="about.html">私について</a>
+    <a href="services.html">サービス・料金</a>
+    <a href="area.html" class="active">対応エリア</a>
+    <a href="faq.html">よくある質問</a>
+    <a href="contact.html" class="nav-cta">お問い合わせ</a>
+  </nav>
+</header>
+
+<!-- ===== FLOATING CTA ===== -->
+<div class="float-cta">
+  <a href="tel:000-0000-0000" class="float-btn float-btn-tel">📞 お電話はこちら</a>
+  <a href="#" class="float-btn float-btn-line">💬 LINEで相談</a>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-inner">
+    <span class="ph-label">Service Area</span>
+    <h1 class="ph-title">対応エリア</h1>
+    <p class="ph-desc">南大阪を中心に、ご自宅・施設へ訪問します</p>
+  </div>
+</div>
+
+<!-- ===== BREADCRUMB ===== -->
+<div class="breadcrumb">
+  <a href="index.html">トップ</a><span>›</span>対応エリア
+</div>
+
+<!-- ===== AREA OVERVIEW ===== -->
+<section style="background: var(--white);">
+  <div class="section-inner">
+    <span class="sec-label">Primary Area</span>
+    <h2 class="sec-title">メイン対応エリア</h2>
+    <p class="sec-desc">下記3市を中心に訪問しています。お近くの方はお気軽にご相談ください。</p>
+
+    <div class="area-detail-grid">
+      <div class="area-detail-card">
+        <h3>📍 河内長野市 <span class="tag">交通費無料</span></h3>
+        <p>
+          全域対応しています。交通費は無料となっています（みずたまの拠点がある市内全域）。<br/>
+          千代田・長野・南花台・滝畑など、市内全域に対応します。
+        </p>
+      </div>
+      <div class="area-detail-card">
+        <h3>📍 富田林市</h3>
+        <p>
+          全域対応しています。<br/>
+          富田林駅周辺・金剛・藤沢台・喜志・彼方など市内全域に訪問可能です。
+          交通費については別途ご相談ください。
+        </p>
+      </div>
+      <div class="area-detail-card">
+        <h3>📍 大阪狭山市</h3>
+        <p>
+          全域対応しています。<br/>
+          大阪狭山市駅周辺・半田・東野など市内全域に訪問可能です。
+          交通費については別途ご相談ください。
+        </p>
+      </div>
+    </div>
+
+    <!-- MAP PLACEHOLDER -->
+    <div class="area-map-box" style="margin-top: 48px; height: 400px;">
+      <span class="map-ph">🗺️</span>
+      <p>
+        ここにGoogleマップが入ります<br/>
+        <small style="color:#94a3b8;">（埋め込みコードを後から挿入予定）</small>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AREA OUTSIDE ===== -->
+<section style="background: var(--pale);">
+  <div class="section-inner">
+    <span class="sec-label">Nearby Area</span>
+    <h2 class="sec-title">近隣エリア・エリア外の対応</h2>
+    <p class="sec-desc">上記3市外の方も、まずはご相談ください。</p>
+
+    <div style="margin-top: 40px; display: flex; flex-direction: column; gap: 16px; max-width: 700px;">
+      <div class="info-box info-box-teal">
+        <strong>📍 対応可能なケースが多い近隣エリア</strong><br/>
+        和泉市 / 岸和田市 / 堺市南区 / 羽曳野市 / 太子町 / 千早赤阪村<br/>
+        ※ 距離・訪問状況によって対応できない場合もあります。
+      </div>
+      <div class="info-box info-box-mint">
+        <strong>📌 エリア外の場合の対応について</strong><br/>
+        エリア外であっても、まずはお気軽にお問い合わせください。<br/>
+        交通費は別途いただきますが、ご対応できる場合があります。<br/>
+        施設様からのご相談は特に広域で対応可能な場合があります。
+      </div>
+    </div>
+
+    <!-- TRANSPORT -->
+    <div style="margin-top: 64px;">
+      <h3 style="font-family: 'Shippori Mincho', serif; font-size: 22px; color: var(--navy); margin-bottom: 8px;">交通費について</h3>
+      <p style="font-size: 14px; color: var(--gray); margin-bottom: 0;">エリアごとの交通費の目安をお知らせします。</p>
+
+      <div class="transport-grid">
+        <div class="transport-card">
+          <span class="transport-icon">🏠</span>
+          <div>
+            <h4>河内長野市内</h4>
+            <p>交通費は無料です。市内であればどこでも追加費用なしで訪問します。</p>
+          </div>
+        </div>
+        <div class="transport-card">
+          <span class="transport-icon">🚗</span>
+          <div>
+            <h4>富田林市・大阪狭山市</h4>
+            <p>交通費は別途いただきます。目安は¥500〜¥800程度（確定後にご案内）。</p>
+          </div>
+        </div>
+        <div class="transport-card">
+          <span class="transport-icon">🗺️</span>
+          <div>
+            <h4>近隣エリア（和泉市・岸和田市など）</h4>
+            <p>交通費・対応可否はご相談ください。訪問状況により対応いたします。</p>
+          </div>
+        </div>
+        <div class="transport-card">
+          <span class="transport-icon">🏥</span>
+          <div>
+            <h4>施設への訪問</h4>
+            <p>施設の場所によって異なります。定期訪問プランの場合はまとめてのご案内となります。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-banner">
+      <h3>エリアが不明な場合も、まずはご連絡を</h3>
+      <p>訪問可能かどうか、まずはお気軽にお問い合わせください。</p>
+      <div class="btn-group">
+        <a href="contact.html" class="btn-primary">✉️ お問い合わせはこちら</a>
+        <a href="tel:000-0000-0000" class="btn-outline" style="color:rgba(255,255,255,0.85); border-color:rgba(255,255,255,0.5);">📞 お電話で確認</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="name">訪問フットケア みずたま</div>
+        <p>
+          〒xxx-xxxx 大阪府河内長野市〇〇〇<br/>
+          TEL: 000-0000-0000<br/>
+          対応エリア：河内長野市・富田林市・大阪狭山市
+        </p>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-nav-col">
+          <h5>サービス</h5>
+          <a href="about.html">私について</a>
+          <a href="services.html">サービス内容</a>
+          <a href="services.html">料金・プラン</a>
+          <a href="services.html#flow">ご利用の流れ</a>
+        </div>
+        <div class="footer-nav-col">
+          <h5>情報</h5>
+          <a href="area.html">対応エリア</a>
+          <a href="faq.html">よくある質問</a>
+          <a href="contact.html">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 訪問フットケア みずたま. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">特定商取引法に基づく表記</a>
+        <a href="index.html">トップへ戻る</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
