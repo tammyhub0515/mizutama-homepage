@@ -494,9 +494,14 @@ section { padding: 96px 24px; }
 #symptoms { background: var(--white); }
 
 .symptoms-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 24px;
+  justify-content: center;
+}
+
+.symptom-card {
+  flex: 0 0 calc((100% - 72px) / 4);
 }
 
 .symptom-img-wrap {
