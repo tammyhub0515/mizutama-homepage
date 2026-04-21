@@ -453,16 +453,16 @@ section { padding: 96px 24px; }
 }
 
 .about-quote {
-  margin-top: 28px;
-  padding: 22px 26px;
+  padding: 16px 20px;
   background: var(--navy);
-  border-radius: 16px;
+  border-radius: 12px;
   color: white;
   font-family: 'Shippori Mincho', serif;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.8;
   position: relative;
+  text-align: center;
 }
 .about-quote::before {
   content: '"';
