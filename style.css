@@ -465,13 +465,7 @@ section { padding: 96px 24px; }
   text-align: center;
 }
 .about-quote::before {
-  content: '"';
-  font-size: 60px;
-  color: rgba(255,255,255,0.12);
-  position: absolute;
-  top: 6px; left: 14px;
-  line-height: 1;
-  font-family: Georgia, serif;
+  display: none;
 }
 .about-quote-sig {
   margin-top: 10px;
