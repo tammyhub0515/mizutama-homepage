@@ -405,7 +405,7 @@ section { padding: 96px 24px; }
 
 .about-left {
   flex-shrink: 0;
-  width: 240px;
+  width: 260px;
   display: flex;
   flex-direction: column;
   gap: 20px;
