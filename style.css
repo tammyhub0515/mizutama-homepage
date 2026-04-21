@@ -475,6 +475,21 @@ section { padding: 96px 24px; }
   font-weight: 400;
 }
 
+.about-sig {
+  margin-top: 24px;
+  font-family: 'Shippori Mincho', serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.08em;
+}
+
+.about-sig rt {
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
 /* ===== SYMPTOMS ===== */
 #symptoms { background: var(--white); }
 
