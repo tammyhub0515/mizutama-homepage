@@ -1226,7 +1226,7 @@ footer {
 }
 
 @media (max-width: 600px) {
-  .symptoms-grid { grid-template-columns: 1fr; }
+  .symptom-card { flex: 0 0 100%; }
   .hero h1 { font-size: 30px; }
   .page-hero { padding: 110px 20px 56px; }
   .cta-banner { padding: 36px 24px; }
