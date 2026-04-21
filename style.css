@@ -495,22 +495,30 @@ section { padding: 96px 24px; }
 
 .symptoms-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
-.symptom-img {
+.symptom-img-wrap {
   width: 100%;
-  max-width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  margin-bottom: 14px;
-  display: block;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  overflow: hidden;
   border-radius: 12px;
   background: var(--white);
 }
 
-.symptom-card { min-width: 0; }
+.symptom-img {
+  height: 100%;
+  width: auto;
+  max-height: 160px;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
 
 .symptom-card {
   background: var(--pale);
