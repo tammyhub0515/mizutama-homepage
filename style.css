@@ -401,20 +401,27 @@ section { padding: 96px 24px; }
   align-items: flex-start;
 }
 
-.about-photo {
+.about-left {
+  flex-shrink: 0;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   position: sticky;
   top: 100px;
+  align-self: flex-start;
+}
+
+.about-photo {
   border-radius: 24px;
   overflow: hidden;
-  width: 240px;
-  max-width: 100%;
+  width: 100%;
   aspect-ratio: 3/4;
   background: linear-gradient(135deg, var(--teal2), var(--mint));
   display: flex; align-items: center; justify-content: center;
   font-size: 80px;
-  flex-shrink: 0;
   box-shadow: 0 12px 48px rgba(27,63,92,0.18);
-  align-self: flex-start;
+  position: relative;
 }
 
 .about-photo img {
