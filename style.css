@@ -495,12 +495,13 @@ section { padding: 96px 24px; }
 
 .symptoms-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
 }
 
 .symptom-img {
   width: 100%;
+  max-width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: contain;
   margin-bottom: 14px;
@@ -508,6 +509,8 @@ section { padding: 96px 24px; }
   border-radius: 12px;
   background: var(--white);
 }
+
+.symptom-card { min-width: 0; }
 
 .symptom-card {
   background: var(--pale);
