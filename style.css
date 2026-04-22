@@ -197,8 +197,8 @@ nav a.active { color: var(--teal); font-weight: 700; }
   height: clamp(72px, 8vw, 100px);
   object-fit: contain;
   flex-shrink: 0;
-  mix-blend-mode: screen;
-  filter: brightness(1.1);
+  border-radius: 50%;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.25);
 }
 
 .hero-brand-name span {
