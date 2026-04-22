@@ -1213,9 +1213,7 @@ footer {
 @media (max-width: 960px) {
   header { padding: 10px 16px; }
   nav a:not(.nav-cta) { display: none; }
-  .logo-mark { width: 34px; height: 34px; }
-  .logo-text .sub { display: none; }
-  .logo-text .main { font-size: 13px; }
+  .logo-mark { width: 48px; height: 48px; }
   .hero-inner { padding: 120px 24px 80px; }
   .about-layout { flex-direction: column; align-items: center; }
   .about-left { position: static; width: 100%; max-width: 280px; }
