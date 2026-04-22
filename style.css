@@ -193,8 +193,8 @@ nav a.active { color: var(--teal); font-weight: 700; }
 }
 
 .hero-brand-logo {
-  width: clamp(52px, 6vw, 72px);
-  height: clamp(52px, 6vw, 72px);
+  width: clamp(72px, 8vw, 100px);
+  height: clamp(72px, 8vw, 100px);
   object-fit: contain;
   flex-shrink: 0;
   filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
