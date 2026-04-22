@@ -1292,6 +1292,7 @@ footer {
   .area-layout { grid-template-columns: 1fr; }
   .contact-cards { grid-template-columns: 1fr; }
   .facility-cards { grid-template-columns: 1fr; }
+  .why-cards { grid-template-columns: 1fr; }
   .feature-cards { grid-template-columns: 1fr; }
   .footer-top { flex-direction: column; }
   .footer-nav { flex-direction: column; gap: 24px; }
