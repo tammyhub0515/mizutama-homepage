@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>訪問フットケア みずたま｜名刺</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    font-family: 'Noto Sans JP', sans-serif;
+    gap: 40px;
+  }
+
+  h2 {
+    color: #555;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    margin-bottom: -30px;
+  }
+
+  /* 名刺サイズ: 91mm × 55mm @ 96dpi → 344px × 208px */
+  /* 印刷時は 91mm × 55mm になるよう @print で調整 */
+  .card {
+    width: 344px;
+    height: 208px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  /* ===== 表面 ===== */
+  .front {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .front-top {
+    background: linear-gradient(135deg, #4aaecb 0%, #7ecfb3 100%);
+    padding: 14px 18px 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .front-top .logo {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+  }
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .brand-jp {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+  }
+
+  .brand-en {
+    font-size: 7.5px;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.12em;
+    font-weight: 300;
+  }
+
+  .front-body {
+    padding: 12px 18px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .name-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .furigana {
+    font-size: 8px;
+    color: #7ecfb3;
+    letter-spacing: 0.18em;
+    font-weight: 400;
+  }
+
+  .name-kanji {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a3a4a;
+    letter-spacing: 0.12em;
+    line-height: 1.1;
+  }
+
+  .name-romaji {
+    font-size: 8px;
+    color: #888;
+    letter-spacing: 0.15em;
+    margin-top: 1px;
+  }
+
+  .title-block {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 2px;
+  }
+
+  .title-label {
+    font-size: 9px;
+    color: #ffffff;
+    background: #4aaecb;
+    padding: 2px 7px;
+    border-radius: 20px;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+  }
+
+  .qualifications {
+    font-size: 7.5px;
+    color: #666;
+    letter-spacing: 0.06em;
+  }
+
+  .front-footer {
+    background: #f7fbfc;
+    border-top: 1px solid #e0f0f5;
+    padding: 8px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 7.5px;
+    color: #444;
+    letter-spacing: 0.04em;
+  }
+
+  .contact-icon {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7px;
+    flex-shrink: 0;
+  }
+
+  .icon-tel  { background: #4aaecb; color: #fff; }
+  .icon-mail { background: #7ecfb3; color: #fff; }
+  .icon-web  { background: #1a3a4a; color: #fff; }
+
+  .qr-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .qr-block img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    border: 1px solid #e0f0f5;
+    border-radius: 3px;
+    padding: 2px;
+    background: #fff;
+  }
+
+  .qr-label {
+    font-size: 6px;
+    color: #06c755;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  /* ===== 裏面 ===== */
+  .back {
+    background: linear-gradient(160deg, #1a3a4a 0%, #0d2535 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* 水玉装飾 */
+  .back::before,
+  .back::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.08;
+  }
+  .back::before {
+    width: 140px; height: 140px;
+    background: #4aaecb;
+    top: -50px; right: -40px;
+  }
+  .back::after {
+    width: 90px; height: 90px;
+    background: #7ecfb3;
+    bottom: -35px; left: -25px;
+  }
+
+  .back-logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    margin-bottom: 8px;
+  }
+
+  .back-brand {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.15em;
+    text-align: center;
+    margin-bottom: 3px;
+  }
+
+  .back-brand-sub {
+    font-size: 7px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+
+  .back-tagline {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 11px;
+    color: #7ecfb3;
+    letter-spacing: 0.18em;
+    text-align: center;
+    border-top: 1px solid rgba(126,207,179,0.3);
+    border-bottom: 1px solid rgba(126,207,179,0.3);
+    padding: 6px 16px;
+    margin-bottom: 12px;
+  }
+
+  .back-services {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .service-tag {
+    font-size: 7px;
+    color: rgba(255,255,255,0.75);
+    border: 1px solid rgba(74,174,203,0.4);
+    border-radius: 20px;
+    padding: 3px 9px;
+    letter-spacing: 0.08em;
+  }
+
+  .back-url {
+    position: absolute;
+    bottom: 9px;
+    font-size: 6.5px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.1em;
+  }
+
+  /* 印刷スタイル */
+  @media print {
+    body {
+      background: white;
+      padding: 10mm;
+      gap: 8mm;
+    }
+    h2 { display: none; }
+    .card {
+      width: 91mm;
+      height: 55mm;
+      box-shadow: none;
+      border: 0.3mm solid #ccc;
+      page-break-after: always;
+    }
+    .card:last-child {
+      page-break-after: auto;
+    }
+    .front-top .logo,
+    .back-logo {
+      image-rendering: -webkit-optimize-contrast;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h2>── 表面 ──</h2>
+
+<!-- 表面 -->
+<div class="card front">
+  <div class="front-top">
+    <img class="logo" src="logo.png" alt="みずたまロゴ">
+    <div class="brand-text">
+      <div class="brand-jp">訪問フットケア　みずたま</div>
+      <div class="brand-en">VISITING FOOT CARE MIZUTAMA</div>
+    </div>
+  </div>
+
+  <div class="front-body">
+    <div class="name-block">
+      <div class="furigana">むらせ　たまみ</div>
+      <div class="name-kanji">村瀬　環水</div>
+      <div class="name-romaji">MURASE TAMAMI</div>
+    </div>
+    <div class="title-block">
+      <span class="title-label">代表</span>
+      <span class="qualifications">看護師・フスフレーガー・リフレソクロジスト</span>
+    </div>
+  </div>
+
+  <div class="front-footer">
+    <div class="contact-list">
+      <div class="contact-item">
+        <div class="contact-icon icon-tel">📞</div>
+        <span>080-2010-1849</span>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon icon-mail">✉</div>
+        <span>mizutama.footcare26@gmail.com</span>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon icon-web">🌐</div>
+        <span>https://hp.mizutama-care.com</span>
+      </div>
+    </div>
+    <div class="qr-block">
+      <img src="../mizutama-homepage/line-qr.png" alt="LINE QRコード">
+      <div class="qr-label">LINE</div>
+    </div>
+  </div>
+</div>
+
+<h2>── 裏面 ──</h2>
+
+<!-- 裏面 -->
+<div class="card back">
+  <img class="back-logo" src="../mizutama-homepage/logo.png" alt="みずたまロゴ">
+  <div class="back-brand">訪問フットケア　みずたま</div>
+  <div class="back-brand-sub">VISITING FOOT CARE MIZUTAMA</div>
+  <div class="back-tagline">足は、嘘をつきません。</div>
+  <div class="back-services">
+    <span class="service-tag">巻き爪ケア</span>
+    <span class="service-tag">肥厚爪ケア</span>
+    <span class="service-tag">タコ・魚の目</span>
+    <span class="service-tag">爪切り</span>
+    <span class="service-tag">糖尿病の足管理</span>
+    <span class="service-tag">施設訪問対応</span>
+  </div>
+  <div class="back-url">河内長野市・富田林市・大阪狭山市エリア対応</div>
+</div>
+
+</body>
+</html>
