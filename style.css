@@ -1135,6 +1135,50 @@ section { padding: 96px 24px; }
 .cta-banner p { font-size: 14px; color: rgba(255,255,255,0.8); margin-bottom: 28px; }
 .cta-banner .btn-group { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
+/* ===== WHY CARDS ===== */
+.why-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.why-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px 28px 36px;
+  box-shadow: 0 4px 28px rgba(27,63,92,0.09);
+  border-top: 3px solid var(--teal2);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 36px rgba(27,63,92,0.14);
+}
+
+.why-icon {
+  font-size: 44px;
+  margin-bottom: 18px;
+  display: block;
+}
+
+.why-title {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.why-text {
+  font-size: 13.5px;
+  color: var(--gray);
+  line-height: 1.85;
+}
+
 /* ===== FEATURE CARDS ===== */
 .feature-cards {
   display: grid;
