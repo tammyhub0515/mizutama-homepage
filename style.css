@@ -1206,7 +1206,7 @@ footer {
   .about-layout { flex-direction: column; align-items: center; }
   .about-left { position: static; width: 100%; max-width: 280px; }
   .about-photo { width: 100%; max-width: 100%; aspect-ratio: 3/4; font-size: 48px; }
-  .about-chips { flex-direction: row; justify-content: center; }
+  .about-chips { flex-direction: column; align-items: stretch; }
   .symptom-card { flex: 0 0 calc((100% - 24px) / 2); }
   .symptom-img { aspect-ratio: 1 / 1; }
   .flow-steps { grid-template-columns: 1fr; }
