@@ -49,7 +49,7 @@ header {
 
 .logo-mark { width: 56px; height: 56px; flex-shrink: 0; overflow: hidden; }
 .logo-mark svg { width: 100%; height: 100%; }
-.logo-mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.logo-mark img { width: 100%; height: 100%; object-fit: contain; display: block; filter: hue-rotate(-25deg) brightness(2.2) saturate(1.4); }
 
 .logo-text .sub {
   font-size: 9px;
