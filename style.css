@@ -176,6 +176,9 @@ nav a.active { color: var(--teal); font-weight: 700; }
 }
 
 .hero-brand-name {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   font-family: 'Shippori Mincho', serif;
   font-size: clamp(24px, 3.5vw, 42px);
   font-weight: 700;
@@ -186,6 +189,14 @@ nav a.active { color: var(--teal); font-weight: 700; }
   line-height: 1.4;
   padding-bottom: 18px;
   border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+.hero-brand-logo {
+  width: clamp(40px, 5vw, 60px);
+  height: clamp(40px, 5vw, 60px);
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
 }
 
 .hero h1 {
