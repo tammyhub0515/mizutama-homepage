@@ -198,7 +198,7 @@ nav a.active { color: var(--teal); font-weight: 700; }
   object-fit: contain;
   flex-shrink: 0;
   border-radius: 50%;
-  filter: brightness(0) saturate(100%) invert(82%) sepia(55%) saturate(400%) hue-rotate(161deg) brightness(110%);
+  filter: hue-rotate(-25deg) brightness(2.2) saturate(1.4);
 }
 
 .hero-brand-name span {
