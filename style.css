@@ -1191,7 +1191,7 @@ footer {
   font-size: 11.5px;
 }
 
-.footer-links { display: flex; gap: 20px; }
+.footer-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
 .footer-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 11px; }
 .footer-links a:hover { color: rgba(255,255,255,0.7); }
 
