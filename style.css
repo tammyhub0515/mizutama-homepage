@@ -197,7 +197,7 @@ nav a.active { color: var(--teal); font-weight: 700; }
 .hero-brand-main {
   display: flex;
   align-items: flex-end;
-  gap: 12px;
+  gap: 6px;
   white-space: nowrap;
 }
 
