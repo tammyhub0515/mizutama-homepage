@@ -1354,8 +1354,8 @@ footer {
   nav a:not(.nav-cta) { display: none; }
   .logo-mark { width: 48px; height: 48px; }
   .hero-inner { padding: 120px 24px 80px; }
-  .hero-brand-main span { font-size: 22px; }
-  .hero-brand-logo { width: 40px; height: 40px; }
+  .hero-brand-main span { font-size: 28px; }
+  .hero-brand-logo { width: 52px; height: 52px; }
   .hero-brand-name { white-space: normal; }
   .about-layout { flex-direction: column; align-items: center; }
   .about-left { position: static; width: 100%; max-width: 280px; }
