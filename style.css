@@ -206,6 +206,45 @@ nav a.active { color: var(--teal); font-weight: 700; }
   white-space: nowrap;
 }
 
+/* Hero feature cards */
+.hero-features {
+  display: flex;
+  gap: 12px;
+  margin-top: 48px;
+  flex-wrap: wrap;
+}
+
+.hero-feature-card {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(27,63,92,0.12);
+  border-radius: 12px;
+  padding: 16px 20px;
+  flex: 1;
+  min-width: 140px;
+  text-align: center;
+}
+
+.hero-feature-icon {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.hero-feature-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1b3f5c;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.hero-feature-desc {
+  font-size: 11px;
+  color: #4a7090;
+  line-height: 1.4;
+}
+
 .hero h1 {
   font-family: 'Shippori Mincho', serif;
   font-size: clamp(36px, 5vw, 64px);
