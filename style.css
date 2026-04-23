@@ -234,13 +234,23 @@ nav a.active { color: var(--teal); font-weight: 700; }
 
 .hero-brand-sub {
   font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  color: #1b3f5c;
-  letter-spacing: 0.18em;
+  font-weight: 500;
+  font-size: 14px;
+  color: #2a5070;
+  letter-spacing: 0.2em;
   text-align: center;
   width: 100%;
   margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-rule {
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.5;
 }
 
 /* Hero feature cards */
