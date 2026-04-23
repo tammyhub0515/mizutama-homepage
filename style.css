@@ -219,7 +219,7 @@ nav a.active { color: var(--teal); font-weight: 700; }
 
 .hero-sub {
   font-size: 15px;
-  color: rgba(27,63,92,0.85);
+  color: rgba(255,255,255,0.82);
   line-height: 2;
   margin-bottom: 40px;
 }
