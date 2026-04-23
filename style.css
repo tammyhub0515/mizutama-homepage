@@ -215,7 +215,7 @@ nav a.active { color: var(--teal); font-weight: 700; }
   text-shadow: 0 2px 16px rgba(0,0,0,0.2);
 }
 
-.hero h1 .catch-accent { color: #0288d1; }
+.hero h1 .catch-accent { color: #7ee0f5; }
 
 .hero-sub {
   font-size: 15px;
