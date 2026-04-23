@@ -134,9 +134,9 @@ nav a.active { color: var(--teal); font-weight: 700; }
 
 .hero-bg {
   position: absolute; inset: 0;
-  background: url('hero-bg.png') 15% 42% / 160% auto no-repeat;
+  background: url('hero-bg.png') 62% 50% / cover no-repeat;
   z-index: 0;
-  filter: brightness(1.05) saturate(1.1);
+  filter: brightness(1.05) saturate(1.05);
 }
 
 .hero-overlay {
