@@ -188,10 +188,10 @@ nav a.active { color: var(--teal); font-weight: 700; }
 .hero-brand-label {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12px;
-  font-weight: 400;
-  color: #4a7090;
+  font-weight: 700;
+  color: #2a5070;
   letter-spacing: 0.05em;
-  margin-bottom: 4px;
+  margin-bottom: 1px;
 }
 
 .hero-brand-main {
