@@ -233,24 +233,30 @@ nav a.active { color: var(--teal); font-weight: 700; }
 }
 
 .hero-brand-sub {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  color: #2a5070;
-  letter-spacing: 0.2em;
-  text-align: center;
-  width: 100%;
-  margin-top: 6px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  width: 100%;
+  margin-top: 6px;
+  color: #2a5070;
 }
 
 .brand-rule {
   flex: 1;
   height: 1px;
-  background: currentColor;
-  opacity: 0.5;
+  background: #2a5070;
+  opacity: 0.45;
+  min-width: 8px;
+}
+
+.brand-mizu {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: #2a5070;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* Hero feature cards */
