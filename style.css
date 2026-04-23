@@ -203,16 +203,21 @@ nav a.active { color: var(--teal); font-weight: 700; }
   gap: 0;
 }
 
+.hero-brand-main {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  white-space: nowrap;
+}
+
 .hero-brand-label {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #1b3f5c;
-  text-align: justify;
-  text-align-last: justify;
-  text-justify: inter-character;
-  width: 100%;
-  line-height: 1.5;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  flex-shrink: 0;
 }
 
 .hero-brand-title {
