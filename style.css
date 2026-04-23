@@ -203,27 +203,17 @@ nav a.active { color: var(--teal); font-weight: 700; }
   gap: 0;
 }
 
-.hero-brand-main {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  white-space: nowrap;
-}
-
-.hero-brand-right {
-  display: flex;
-  flex-direction: column;
-}
-
 .hero-brand-label {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: #1b3f5c;
+  font-size: 15px;
+  font-weight: 500;
+  color: #2a5070;
+  text-align: justify;
+  text-align-last: justify;
+  text-justify: inter-character;
+  width: 100%;
+  line-height: 1.6;
   letter-spacing: 0.05em;
-  line-height: 1.2;
-  flex-shrink: 0;
-  padding-top: 10px;
 }
 
 .hero-brand-title {
