@@ -916,7 +916,7 @@ section { padding: 96px 24px; }
 
 .contact-bg {
   position: absolute; inset: 0;
-  background: url('hero-bg.png') center / cover no-repeat;
+  background: linear-gradient(135deg, #e8f4f8 0%, #d0eaf4 50%, #b8dced 100%);
   z-index: 0;
 }
 
