@@ -209,10 +209,10 @@ nav a.active { color: var(--teal); font-weight: 700; }
   font-family: 'Shippori Mincho', serif;
   font-size: clamp(36px, 5vw, 62px);
   font-weight: 800;
-  color: var(--white);
+  color: #1a237e;
   line-height: 1.4;
   margin-bottom: 20px;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.2);
+  text-shadow: 0 2px 8px rgba(255,255,255,0.6);
 }
 
 .hero h1 .catch-accent { color: #7ee0f5; }
