@@ -205,9 +205,14 @@ nav a.active { color: var(--teal); font-weight: 700; }
 
 .hero-brand-main {
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
   gap: 10px;
   white-space: nowrap;
+}
+
+.hero-brand-right {
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-brand-label {
