@@ -208,21 +208,31 @@ nav a.active { color: var(--teal); font-weight: 700; }
 
 .hero h1 {
   font-family: 'Shippori Mincho', serif;
-  font-size: clamp(36px, 5vw, 62px);
+  font-size: clamp(36px, 5vw, 64px);
   font-weight: 800;
-  color: var(--white);
-  line-height: 1.4;
-  margin-bottom: 20px;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.2);
+  color: #1b3f5c;
+  line-height: 1.35;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 8px rgba(255,255,255,0.6);
 }
 
-.hero h1 .catch-accent { color: #7ee0f5; }
+.hero h1 .catch-accent { color: #1b3f5c; }
+
+.hero-lead {
+  font-size: clamp(15px, 1.6vw, 18px);
+  font-weight: 700;
+  color: #1b3f5c;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  text-shadow: 0 1px 4px rgba(255,255,255,0.7);
+}
 
 .hero-sub {
   font-size: 15px;
-  color: rgba(255,255,255,0.82);
-  line-height: 2;
-  margin-bottom: 40px;
+  color: #2a5070;
+  line-height: 1.9;
+  margin-bottom: 36px;
+  text-shadow: 0 1px 4px rgba(255,255,255,0.6);
 }
 
 .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
