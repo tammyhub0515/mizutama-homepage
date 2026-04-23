@@ -211,7 +211,7 @@ nav a.active { color: var(--teal); font-weight: 700; }
 .hero-brand-main span {
   font-family: 'Shippori Mincho', serif;
   font-size: clamp(20px, 2.4vw, 28px);
-  font-weight: 400;
+  font-weight: 700;
   color: #1b3f5c;
   letter-spacing: 0.12em;
   text-shadow: 0 1px 6px rgba(255,255,255,0.9);
