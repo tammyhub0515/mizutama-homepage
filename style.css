@@ -197,14 +197,15 @@ nav a.active { color: var(--teal); font-weight: 700; }
 .hero-brand-main {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   white-space: nowrap;
 }
 
 .hero-brand-text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
+  justify-content: center;
 }
 
 .hero-brand-main span {
