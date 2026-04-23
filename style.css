@@ -191,7 +191,8 @@ nav a.active { color: var(--teal); font-weight: 700; }
   font-weight: 700;
   color: #2a5070;
   letter-spacing: 0.05em;
-  margin-bottom: 2px;
+  margin-bottom: 0px;
+  line-height: 1.2;
 }
 
 .hero-brand-main {
