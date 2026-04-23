@@ -275,7 +275,7 @@ nav a.active { color: var(--teal); font-weight: 700; }
 
 .hero h1 {
   font-family: 'Shippori Mincho', serif;
-  font-size: clamp(36px, 5vw, 64px);
+  font-size: clamp(28px, 4vw, 52px);
   font-weight: 800;
   color: #1b3f5c;
   line-height: 1.35;
