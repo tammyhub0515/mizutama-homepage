@@ -187,43 +187,43 @@ nav a.active { color: var(--teal); font-weight: 700; }
 
 .hero-brand-label {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 500;
   color: #2a5070;
-  letter-spacing: 0.05em;
-  margin-bottom: 0px;
+  letter-spacing: 0.18em;
+  margin-bottom: 2px;
   line-height: 1.2;
 }
 
 .hero-brand-main {
   display: flex;
   align-items: flex-end;
-  gap: 8px;
+  gap: 12px;
   white-space: nowrap;
 }
 
 .hero-brand-main span {
   font-family: 'Shippori Mincho', serif;
-  font-size: clamp(24px, 2.8vw, 34px);
+  font-size: clamp(32px, 4vw, 48px);
   font-weight: 700;
   color: #1b3f5c;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-shadow: 0 1px 6px rgba(255,255,255,0.9);
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 .hero-brand-main span em {
   font-style: italic;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 300;
-  font-size: 0.72em;
-  letter-spacing: 0.08em;
-  color: #2a5070;
+  font-family: 'Georgia', serif;
+  font-weight: 400;
+  font-size: 0.55em;
+  letter-spacing: 0.06em;
+  color: #3a6a8a;
 }
 
 .hero-brand-logo {
-  width: 60px;
-  height: 60px;
+  width: 72px;
+  height: 72px;
   object-fit: contain;
   flex-shrink: 0;
   border-radius: 50%;
