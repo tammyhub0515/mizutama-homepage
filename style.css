@@ -133,18 +133,19 @@ nav a.active { color: var(--teal); font-weight: 700; }
 
 .hero-bg {
   position: absolute; inset: 0;
-  background: url('hero-bg.png') center right / cover no-repeat;
+  background: url('hero-bg.png') center / cover no-repeat;
   z-index: 0;
+  filter: brightness(1.7) saturate(0.75);
 }
 
 .hero-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(
     105deg,
-    rgba(27,63,92,0.88)  0%,
-    rgba(27,63,92,0.80) 35%,
-    rgba(27,63,92,0.42) 60%,
-    rgba(27,63,92,0.05) 82%
+    rgba(255,255,255,0.60) 0%,
+    rgba(255,255,255,0.40) 40%,
+    rgba(255,255,255,0.10) 70%,
+    rgba(255,255,255,0.00) 100%
   );
   z-index: 1;
 }
