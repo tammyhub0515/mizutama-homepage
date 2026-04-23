@@ -133,7 +133,7 @@ nav a.active { color: var(--teal); font-weight: 700; }
 
 .hero-bg {
   position: absolute; inset: 0;
-  background: url('hero-bg.png') 85% 80% / cover no-repeat;
+  background: url('hero-bg.png') 75% 60% / 130% auto no-repeat;
   z-index: 0;
   filter: brightness(1.05) saturate(1.1);
 }
