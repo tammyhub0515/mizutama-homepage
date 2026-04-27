@@ -107,17 +107,17 @@ header {
 nav { display: flex; gap: 28px; align-items: center; }
 nav a {
   text-decoration: none;
-  color: var(--gray);
+  color: rgba(255,255,255,0.75);
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.3px;
   transition: color 0.2s;
 }
-nav a:hover { color: var(--teal); }
-nav a.active { color: var(--teal); font-weight: 700; }
+nav a:hover { color: #ffffff; }
+nav a.active { color: #ffffff; font-weight: 700; }
 
 .nav-cta {
-  background: var(--navy);
+  background: var(--teal);
   color: var(--white) !important;
   padding: 9px 22px;
   border-radius: 4px;
@@ -126,7 +126,7 @@ nav a.active { color: var(--teal); font-weight: 700; }
   letter-spacing: 0.5px;
   transition: background 0.2s !important;
 }
-.nav-cta:hover { background: var(--teal) !important; }
+.nav-cta:hover { background: var(--teal2) !important; }
 
 /* ===== FLOATING CTA ===== */
 .float-cta {
