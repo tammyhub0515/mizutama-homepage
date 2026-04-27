@@ -279,7 +279,7 @@ nav a.active { color: var(--teal); font-weight: 700; }
   opacity: 0.5;
   min-width: 8px;
 }
-.hero-brand-sub .brand-rule:first-child { flex: 0.2; }
+.hero-brand-sub .brand-rule:first-child { flex: 1; }
 .hero-brand-sub .brand-rule:last-child  { flex: 1; }
 
 .brand-mizu {
