@@ -568,7 +568,7 @@ section { padding: 96px 24px; }
 
 .about-photo-label {
   position: absolute;
-  bottom: 8%;
+  bottom: 3%;
   left: 10%;
   width: fit-content;
   background: rgba(27,63,92,0.82);
