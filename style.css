@@ -319,6 +319,11 @@ nav a.active { color: #ffffff; font-weight: 700; }
   flex-shrink: 0;
 }
 
+.hero-title-group {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+}
 .hero-brand-sub {
   display: flex;
   align-items: center;
