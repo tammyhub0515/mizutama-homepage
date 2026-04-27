@@ -226,7 +226,7 @@ nav a.active { color: var(--teal); font-weight: 700; }
   font-size: clamp(26px, 3.2vw, 40px);
   font-weight: 400;
   color: #1b3f5c;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
   line-height: 1.0;
   text-shadow: 0 1px 6px rgba(255,255,255,0.9);
   white-space: nowrap;
