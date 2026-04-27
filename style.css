@@ -58,7 +58,7 @@ header {
 }
 .logo-text .sub {
   font-size: 9px;
-  color: var(--teal);
+  color: rgba(255,255,255,0.65);
   font-weight: 600;
   display: block;
   text-align: justify;
@@ -70,7 +70,7 @@ header {
 .logo-text .main {
   font-size: 20px;
   font-weight: 400;
-  color: var(--navy);
+  color: #ffffff;
   font-family: 'Klee One', cursive;
   line-height: 1.15;
   white-space: nowrap;
