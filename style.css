@@ -1437,7 +1437,7 @@ footer {
   background: rgba(255,255,255,0.3);
   min-width: 6px;
 }
-.footer-brand-sub .footer-brand-rule:first-child { flex: 0.2; }
+.footer-brand-sub .footer-brand-rule:first-child { flex: 1; }
 .footer-brand-sub .footer-brand-rule:last-child  { flex: 1; }
 
 .footer-nav { display: flex; gap: 56px; }
