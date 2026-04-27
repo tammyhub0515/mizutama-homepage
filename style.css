@@ -303,7 +303,7 @@ nav a.active { color: var(--teal); font-weight: 700; }
 }
 .body-brand-mizu {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 0.58em;
+  font-size: 0.44em;
   color: var(--teal);
   font-weight: 600;
   letter-spacing: 1.5px;
