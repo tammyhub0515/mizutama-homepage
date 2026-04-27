@@ -91,6 +91,8 @@ header {
   opacity: 0.5;
   min-width: 4px;
 }
+.logo-mizu-row .logo-rule:first-child { flex: 0.2; }
+.logo-mizu-row .logo-rule:last-child  { flex: 1; }
 .logo-mizu {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 9px;
