@@ -1473,8 +1473,9 @@ footer {
 
 @media (max-width: 600px) {
   .symptom-card { flex: 0 0 100%; }
-  .hero h1 { font-size: 30px; }
+  .hero h1 { font-size: 24px; }
   .page-hero { padding: 110px 20px 56px; }
   .cta-banner { padding: 36px 24px; }
   .cta-banner h3 { font-size: 22px; }
+  footer { padding-bottom: 100px; }
 }
