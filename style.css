@@ -1441,6 +1441,7 @@ footer {
 }
 .footer-brand-sub .footer-brand-rule:first-child { flex: 1; }
 .footer-brand-sub .footer-brand-rule:last-child  { flex: 1; }
+.footer-brand-mizu { margin-right: -1px; }
 
 .footer-nav { display: flex; gap: 56px; }
 
