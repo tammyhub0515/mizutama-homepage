@@ -272,7 +272,7 @@ nav a.active { color: var(--teal); font-weight: 700; }
   display: inline-flex;
   flex-direction: column;
   align-items: stretch;
-  vertical-align: middle;
+  vertical-align: baseline;
   margin: 0 0.15em;
   line-height: 1;
   gap: 2px;
