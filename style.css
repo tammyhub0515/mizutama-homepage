@@ -61,12 +61,13 @@ header {
 }
 .logo-text .main {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--navy);
-  font-family: 'Shippori Mincho', serif;
+  font-family: 'Klee One', cursive;
   line-height: 1.2;
   white-space: nowrap;
 }
+.logo-hira { font-size: 0.65em; vertical-align: 0.08em; }
 
 nav { display: flex; gap: 28px; align-items: center; }
 nav a {
