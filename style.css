@@ -259,7 +259,7 @@ nav a.active { color: var(--teal); font-weight: 700; }
   white-space: nowrap;
 }
 
-.brand-hira {
+.brand-hira, .hira-no {
   font-size: 0.62em;
   vertical-align: 0.08em;
 }
