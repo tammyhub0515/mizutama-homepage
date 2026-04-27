@@ -99,6 +99,7 @@ header {
   font-weight: 600;
   color: var(--teal);
   letter-spacing: 2px;
+  margin-right: -2px;
   white-space: nowrap;
   flex-shrink: 0;
 }
