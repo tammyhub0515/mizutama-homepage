@@ -279,6 +279,7 @@ nav a.active { color: var(--teal); font-weight: 700; }
 }
 .body-brand-main {
   font-family: 'Klee One', cursive;
+  font-size: 1.1em;
   text-align: center;
   color: var(--navy);
   white-space: nowrap;
