@@ -568,7 +568,7 @@ section { padding: 96px 24px; }
 
 .about-photo-label {
   position: absolute;
-  bottom: 26%;
+  bottom: 13%;
   left: 50%;
   transform: translateX(-50%);
   width: fit-content;
