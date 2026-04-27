@@ -1483,6 +1483,11 @@ footer {
   vertical-align: 0.08em;
 }
 
+.footer-title-group {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+}
 .footer-brand-sub {
   display: flex;
   align-items: center;
