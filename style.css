@@ -574,11 +574,18 @@ section { padding: 96px 24px; }
   background: rgba(27,63,92,0.82);
   backdrop-filter: blur(8px);
   border-radius: 8px;
-  padding: 8px 14px;
+  padding: 10px 16px;
   color: white;
   text-align: left;
 }
-.about-photo-label .name { font-family: 'Shippori Mincho', serif; font-size: 13px; font-weight: 700; letter-spacing: 0.05em; white-space: nowrap; }
+.about-label-role {
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.15em;
+  margin-bottom: 4px;
+}
+.about-photo-label .name { font-family: 'Shippori Mincho', serif; font-size: 15px; font-weight: 700; letter-spacing: 0.08em; white-space: nowrap; }
 .about-photo-label .title { font-size: 10px; color: rgba(255,255,255,0.75); margin-top: 2px; letter-spacing: 0.03em; white-space: nowrap; }
 
 .about-chips {
