@@ -1579,6 +1579,9 @@ footer {
 /* スマホ専用改行 */
 .sp-br { display: none; }
 
+/* PC専用改行（スマホでは非表示） */
+.pc-br { display: inline; }
+
 /* 屋号ユニットの途中改行防止 */
 .nowrap-brand { white-space: nowrap; }
 
