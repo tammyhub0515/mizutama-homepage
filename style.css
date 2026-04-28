@@ -93,7 +93,7 @@ header {
 .logo-rule {
   flex: 1;
   height: 1px;
-  background: rgba(255,255,255,0.35);
+  background: rgba(58,154,184,0.45);
   opacity: 1;
   min-width: 4px;
 }
