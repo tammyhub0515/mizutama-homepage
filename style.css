@@ -119,8 +119,8 @@ nav a {
   letter-spacing: 0.3px;
   transition: color 0.2s;
 }
-nav a:hover { color: #ffffff; }
-nav a.active { color: #ffffff; font-weight: 700; }
+nav a:hover { color: var(--navy); }
+nav a.active { color: var(--navy); font-weight: 700; }
 
 .nav-cta {
   background: var(--teal);
