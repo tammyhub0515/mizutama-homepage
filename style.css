@@ -1429,7 +1429,7 @@ footer {
   align-items: flex-start;
   gap: 48px;
   padding-bottom: 32px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(27,63,92,0.15);
   margin-bottom: 24px;
 }
 
