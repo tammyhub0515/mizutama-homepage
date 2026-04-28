@@ -1447,6 +1447,7 @@ footer {
   height: 44px;
   object-fit: cover;
   border-radius: 50%;
+  filter: hue-rotate(-20deg) brightness(1.8) saturate(0.9) opacity(0.85);
   flex-shrink: 0;
 }
 
