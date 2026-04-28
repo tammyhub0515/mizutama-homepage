@@ -1599,6 +1599,9 @@ footer {
   /* スマホ専用改行を有効化 */
   .sp-br { display: inline; }
 
+  /* PC専用改行をスマホで非表示 */
+  .pc-br { display: none; }
+
   /* 屋号nowrapを解除（画面幅に収まらない場合は折り返し許可） */
   .nowrap-brand { white-space: normal; }
 }
