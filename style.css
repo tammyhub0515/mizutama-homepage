@@ -1538,8 +1538,8 @@ footer {
 }
 
 .footer-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
-.footer-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 11px; }
-.footer-links a:hover { color: rgba(255,255,255,0.7); }
+.footer-links a { color: rgba(27,63,92,0.5); text-decoration: none; font-size: 11px; }
+.footer-links a:hover { color: var(--navy); }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 960px) {
