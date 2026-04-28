@@ -1472,7 +1472,7 @@ footer {
   font-family: 'Klee One', cursive;
   font-size: 22px;
   font-weight: 400;
-  color: white;
+  color: var(--navy);
   letter-spacing: 0.05em;
   line-height: 1.1;
   white-space: nowrap;
