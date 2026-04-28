@@ -1576,6 +1576,12 @@ footer {
   .form-row { grid-template-columns: 1fr; gap: 0; }
 }
 
+/* スマホ専用改行 */
+.sp-br { display: none; }
+
+/* 屋号ユニットの途中改行防止 */
+.nowrap-brand { white-space: nowrap; }
+
 @media (max-width: 600px) {
   .symptom-card { flex: 0 0 100%; }
   .hero h1 { font-size: 24px; }
@@ -1583,4 +1589,13 @@ footer {
   .cta-banner { padding: 36px 24px; }
   .cta-banner h3 { font-size: 22px; }
   footer { padding-bottom: 160px; }
+
+  /* 見出しフォントサイズをスマホ用に縮小 */
+  .sec-title { font-size: 22px; }
+
+  /* スマホ専用改行を有効化 */
+  .sp-br { display: inline; }
+
+  /* 屋号nowrapを解除（画面幅に収まらない場合は折り返し許可） */
+  .nowrap-brand { white-space: normal; }
 }
