@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hp.mizutama-care.com/sitemap.xml
