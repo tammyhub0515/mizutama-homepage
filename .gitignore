@@ -21,3 +21,9 @@ Thumbs.db
 # ログ・一時ファイル
 *.log
 tmp/
+
+# 開発用スクリプト（公開不要）
+auto_push.sh
+
+# Claude Code設定
+.claude/
