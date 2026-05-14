@@ -72,12 +72,13 @@ header {
   text-justify: inter-character;
   width: 100%;
   line-height: 1.5;
+  font-family: 'Hina Mincho', serif;
 }
 .logo-text .main {
   font-size: 20px;
   font-weight: 400;
   color: #1b3f5c;
-  font-family: 'Klee One', cursive;
+  font-family: 'Hina Mincho', serif;
   line-height: 1.15;
   white-space: nowrap;
   display: block;
@@ -100,7 +101,7 @@ header {
 .logo-mizu-row .logo-rule:first-child { flex: 1; }
 .logo-mizu-row .logo-rule:last-child  { flex: 1; }
 .logo-mizu {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Hina Mincho', serif;
   font-size: 9px;
   font-weight: 600;
   color: var(--teal);
@@ -246,7 +247,7 @@ nav a.active { color: var(--navy); font-weight: 700; }
 }
 
 .hero-brand-label {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Hina Mincho', serif;
   font-size: 13px;
   font-weight: 600;
   color: #1b3f5c;
@@ -255,7 +256,7 @@ nav a.active { color: var(--navy); font-weight: 700; }
 }
 
 .hero-brand-title {
-  font-family: 'Klee One', cursive;
+  font-family: 'Hina Mincho', serif;
   font-size: clamp(26px, 3.2vw, 40px);
   font-weight: 400;
   color: #1b3f5c;
@@ -284,7 +285,7 @@ nav a.active { color: var(--navy); font-weight: 700; }
   gap: 2px;
 }
 .body-brand-main {
-  font-family: 'Klee One', cursive;
+  font-family: 'Hina Mincho', serif;
   font-size: 1.1em;
   text-align: center;
   color: var(--navy);
@@ -309,7 +310,7 @@ nav a.active { color: var(--navy); font-weight: 700; }
   min-width: 3px;
 }
 .body-brand-mizu {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Hina Mincho', serif;
   font-size: 0.44em;
   color: var(--teal);
   font-weight: 600;
@@ -345,7 +346,7 @@ nav a.active { color: var(--navy); font-weight: 700; }
 .hero-brand-sub .brand-rule:last-child  { flex: 1; }
 
 .brand-mizu {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Hina Mincho', serif;
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 2.5px;
@@ -1458,7 +1459,7 @@ footer {
 }
 
 .footer-brand-label {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Hina Mincho', serif;
   font-size: 10px;
   font-weight: 500;
   color: rgba(27,63,92,0.7);
@@ -1470,7 +1471,7 @@ footer {
 }
 
 .footer-brand-title {
-  font-family: 'Klee One', cursive;
+  font-family: 'Hina Mincho', serif;
   font-size: 22px;
   font-weight: 400;
   color: var(--navy);
@@ -1508,7 +1509,9 @@ footer {
 }
 .footer-brand-sub .footer-brand-rule:first-child { flex: 1; }
 .footer-brand-sub .footer-brand-rule:last-child  { flex: 1; }
-.footer-brand-mizu { margin-right: -1px; }
+.footer-brand-mizu { margin-right: -1px;
+  font-family: 'Hina Mincho', serif;
+}
 
 .footer-nav { display: flex; gap: 56px; }
 
@@ -1548,7 +1551,9 @@ footer {
   nav a:not(.nav-cta) { display: none; }
   .logo-mark { width: 48px; height: 48px; }
   .hero-inner { padding: 120px 24px 80px; }
-  .hero-brand-title { font-size: 30px; letter-spacing: 0.3em; }
+  .hero-brand-title { font-size: 30px; letter-spacing: 0.3em;
+  font-family: 'Hina Mincho', serif;
+}
   .hero-brand-logo { width: 52px; height: 52px; }
   .hero-brand-name { gap: 14px; }
   .about-layout { flex-direction: column; align-items: center; }
@@ -1605,3 +1610,6 @@ footer {
   /* 屋号nowrapを解除（画面幅に収まらない場合は折り返し許可） */
   .nowrap-brand { white-space: normal; }
 }
+
+/* 「環」のみ微調整：Hina Mincho の画数差による視覚的重さの違いを緩和 */
+.brand-kan { font-size: 0.94em; }
