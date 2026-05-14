@@ -249,7 +249,7 @@ nav a.active { color: var(--navy); font-weight: 700; }
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 13px;
   font-weight: 600;
-  color: var(--teal);
+  color: #1b3f5c;
   letter-spacing: 2.5px;
   line-height: 1.6;
 }
